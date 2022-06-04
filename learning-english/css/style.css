@@ -33,7 +33,7 @@ header {
     text-decoration: none;
 }
 
-div.logo>a:visited, div.logo>a:hover {
+div.logo>a:visited, div.logo>a:hover, div.logo>a:link {
     color: var(--white-color);
 }
 
