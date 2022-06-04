@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning English | Listening</title>
+    <link rel="stylesheet" href="../../../../css/reset.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/audioplayer.css">
+    <script src="../../../../js/include-html.js"></script>
+    <script src="../../../../js/jquery.js"></script>
+    <script src="../../../../js/audioplayer.js"></script>
+    <script src="../../../../js/toggle-content.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="../../../../../header.html"></div>
+
+    <main-content>
+        <div class="container">
+            <h1>
+                Exercise 0001
+            </h1>
+            <audio src="file.mp3" preload="auto" controls></audio>
+            <img src="image.jpg" alt="">
+            <button class="btn-toggle" data-toggle-target="#script-content" data-toggle-text="Hide scripts">Show scripts</button>
+            <div id="script-content" w3-include-html="script.html"></div>
+            <div class="source" w3-include-html="source.html"></div>
+        </div>
+    </main-content>
+
+    <footer>
+        <div class="copyright" w3-include-html="../../../../../copyright.html"></div>
+    </footer>
+
+    <script>
+        includeHTML();
+    </script>
+    <script>$(function () { $('audio').audioPlayer(); });</script>
+</body>
+
+</html>
