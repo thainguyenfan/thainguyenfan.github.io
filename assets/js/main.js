@@ -6,6 +6,7 @@
       _title: 'Nguyen Phan — Kỹ sư phần mềm',
       _description: 'Phan Thái Nguyên — Kỹ sư phần mềm tại TP. Hồ Chí Minh, Việt Nam.',
       themeToggle: 'Chuyển giao diện sáng/tối',
+      sharedEnAria: 'Mở trang chia sẻ tiếng Anh',
       avatarAlt: 'Ảnh chân dung Nguyen Phan',
       location: 'TP. Hồ Chí Minh, Việt Nam',
       role: 'Kỹ sư phần mềm',
@@ -36,6 +37,7 @@
       _title: 'Nguyen Phan — Software Engineer',
       _description: 'Phan Thái Nguyên — Software Engineer based in Ho Chi Minh City, Vietnam.',
       themeToggle: 'Toggle light/dark theme',
+      sharedEnAria: 'Open the shared English page',
       avatarAlt: 'Portrait of Nguyen Phan',
       location: 'Ho Chi Minh City, Vietnam',
       role: 'Software Engineer',
@@ -120,7 +122,7 @@
   document.getElementById('theme-toggle').addEventListener('click', function () {
     var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     setTheme(next);
-    store('theme', next);
+    store('ddn:theme', JSON.stringify(next));
   });
 
   /* ---------- Footer year ---------- */

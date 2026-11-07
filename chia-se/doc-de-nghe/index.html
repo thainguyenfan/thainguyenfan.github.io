@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ĐỌC ĐỂ NGHE · 99 bài</title>
+<meta name="description" content="Đọc để nghe: 99 bài đọc ngắn có phiên âm IPA, nghĩa, đồng nghĩa, mẹo nhớ và âm nối, mỗi bài có 4 trình độ A1, A2, B1, B2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<script>try{if(localStorage.getItem('ddn:theme')==='"dark"')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<style>
+:root{
+  --ink:#251B3A; --ink-2:#574D72; --line:#E8E2F4;
+  --p800:#3A1F86; --p700:#5232B4; --p300:#BCA8F4; --p100:#EFE9FE; --p50:#F9F7FF;
+  --o500:#F97316; --o300:#FDBA74;
+  --desk:#ECE7F6;
+  --f-ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--desk);color:var(--ink);font-family:var(--f-ui);line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:14px 16px 56px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.hero{position:relative;overflow:hidden;background:var(--p800);color:#fff;border-radius:14px;padding:30px 34px 26px;border-bottom:4px solid var(--o500);box-shadow:0 18px 40px rgba(38,20,88,.18)}
+.hero::after{content:"99";position:absolute;right:20px;top:-30px;font:800 170px/1 var(--f-ui);letter-spacing:-.05em;color:rgba(255,255,255,.07);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--o300)}
+.hero h1{font-size:46px;line-height:1.1;font-weight:800;letter-spacing:-.02em;margin:14px 0 12px}
+.lead{font-size:16px;font-weight:500;color:var(--p300);max-width:620px}
+
+.card{margin-top:20px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(38,20,88,.06),0 12px 30px rgba(38,20,88,.10)}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 16px;padding:14px 18px;font-size:14px;color:var(--ink-2);border-bottom:1px solid var(--line)}
+.bar b{color:var(--p700)}
+table{width:100%;border-collapse:separate;border-spacing:0}
+thead th{position:sticky;top:0;z-index:2;background:linear-gradient(90deg,var(--p800),var(--p700));color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:12px 16px}
+thead th:first-child{border-top-left-radius:14px}
+thead th:last-child{border-top-right-radius:14px}
+th.c-no,td.c-no{width:84px;text-align:center}
+th.c-lv,td.c-lv{width:260px}
+tbody td{padding:11px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr:nth-child(even) td{background:var(--p50)}
+tbody tr:hover td{background:var(--p100)}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:last-child td:first-child{border-bottom-left-radius:14px}
+tbody tr:last-child td:last-child{border-bottom-right-radius:14px}
+td.c-no{font-weight:800;color:var(--p700);font-variant-numeric:tabular-nums}
+.en{display:block;font-weight:600;font-size:15px;color:var(--ink)}
+.vi{display:block;font-size:13px;color:var(--ink-2);margin-top:1px}
+.lvs{display:flex;gap:6px}
+.lv{flex:1;display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:4px 8px;border-radius:999px;border:1.5px solid var(--p300);background:#fff;color:var(--p700);font-size:13px;font-weight:700;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.lv:hover{background:var(--p700);border-color:var(--p700);color:#fff}
+.lv:focus-visible{outline:3px solid var(--o500);outline-offset:2px}
+
+.note{margin-top:22px;background:#fff;border-radius:14px;padding:18px 22px;border-left:5px solid var(--o500);box-shadow:0 1px 2px rgba(38,20,88,.06),0 12px 30px rgba(38,20,88,.08);font-size:14.5px;color:var(--ink-2)}
+.note h2{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--p700);margin-bottom:8px}
+.note ul{padding-left:18px}
+.note li{margin:5px 0}
+.note a{color:var(--p700);font-weight:600}
+
+/* Màn hình lớn: phóng to giống các trang bài học (b1/b2/...) */
+@media screen and (min-width:1280px){.wrap{zoom:1.18}}
+
+@media (max-width:640px){
+  .wrap{padding:8px 12px 40px}
+  .hero{padding:24px 20px 20px}
+  .hero h1{font-size:36px}
+  .hero::after{font-size:120px;top:-20px}
+  thead{display:none}
+  table,tbody,tr,td{display:block;width:100%}
+  tbody tr{display:grid;grid-template-columns:40px 1fr;column-gap:12px;padding:13px 16px;border-bottom:1px solid var(--line)}
+  tbody tr:last-child{border-bottom:0}
+  tbody tr td,tbody tr:nth-child(even) td,tbody tr:hover td{padding:0;border:0;background:transparent}
+  td.c-no{grid-column:1;grid-row:1;width:auto;text-align:left;font-size:18px;line-height:1.3}
+  td.c-name{grid-column:2;grid-row:1}
+  td.c-lv{grid-column:2;grid-row:2;width:auto;margin-top:10px}
+  .lv{min-height:38px}
+  .note{padding:16px 18px}
+}
+
+/* ---------- Thanh bên phải: đổi giao diện sáng/tối (dính khi cuộn) ---------- */
+:root{--surface:#ffffff;--surface-glass:rgba(255,255,255,.92)}
+@media screen{
+  :root[data-theme="dark"]{
+    --desk:#0F0B1E; --surface:#17122B; --surface-glass:rgba(23,18,43,.92);
+    --ink:#ECE8F7; --ink-2:#B9B1D0; --muted:#8C84A8; --line:#2E2650;
+    --p50:#1E1834; --p100:#2A2250; --p600:#A78BFA; --p700:#C4B5FD; --p900:#F1ECFF;
+    --o100:rgba(249,115,22,.16); --o700:#FDBA74;
+    color-scheme:dark;
+  }
+  [data-theme="dark"] .toolbar{background:var(--surface-glass)}
+  [data-theme="dark"] .tb:not(.primary),[data-theme="dark"] .field select{background:var(--surface);color:#D9CCFF}
+  [data-theme="dark"] .tb.primary:hover{background:#5232B4}
+  [data-theme="dark"] .page,[data-theme="dark"] .card,[data-theme="dark"] .note{background:var(--surface)}
+  [data-theme="dark"] .kw,[data-theme="dark"] .steps b,[data-theme="dark"] .rule b,[data-theme="dark"] .reveal,[data-theme="dark"] .blind-note{color:#D9CCFF}
+  [data-theme="dark"] .reveal,[data-theme="dark"] .lv{background:var(--surface)}
+  [data-theme="dark"] .blind-note span{background:rgba(23,18,43,.94)}
+  [data-theme="dark"] .lv:hover{color:#1E1834}
+  [data-theme="dark"] .review input{background:var(--surface)}
+  [data-theme="dark"] .review input:checked{background:#7C5CE0;border-color:#7C5CE0}
+}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,210mm) minmax(0,1fr);column-gap:14px;align-items:start}
+.row.row-2{grid-template-columns:minmax(0,1fr) 0;column-gap:0}
+.row>.page,.row>.card{grid-column:2;grid-row:1}
+.row.row-2>.card{grid-column:1}
+.rail{grid-column:3;grid-row:1;justify-self:start;position:sticky;top:20px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.home-btn{text-decoration:none}
+.row.row-2>.rail{grid-column:2;margin-left:14px}
+.theme-btn{width:40px;height:40px;display:inline-grid;place-items:center;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--p700);box-shadow:0 1px 2px rgba(38,20,88,.06),0 12px 30px -12px rgba(38,20,88,.18);cursor:pointer;transition:transform .2s ease,color .2s ease}
+.theme-btn:hover{transform:rotate(-15deg);color:var(--p600)}
+.theme-btn:focus-visible{outline:3px solid var(--o500);outline-offset:2px}
+.theme-btn svg{width:18px;height:18px}
+.theme-btn .i-sun{display:none}
+[data-theme="dark"] .theme-btn .i-sun{display:block}
+[data-theme="dark"] .theme-btn .i-moon{display:none}
+@media (max-width:860px){
+  .row,.row.row-2{display:block}
+  .rail{position:fixed;right:12px;bottom:14px;top:auto;z-index:30}
+}
+@media print{.rail{display:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">99 bài · A1 · A2 · B1 · B2</p>
+    <h1>ĐỌC ĐỂ NGHE</h1>
+    <p class="lead">Bài đọc ngắn có phiên âm IPA, nghĩa, đồng nghĩa, mẹo nhớ và âm nối. Mỗi bài in vừa một trang A4.</p>
+  </header>
+
+  <div class="row row-2">
+  <div class="card">
+    <table>
+      <caption class="sr-only">Danh sách 99 bài, mỗi bài có liên kết tới bản A1, A2, B1 và B2</caption>
+      <thead>
+        <tr>
+          <th scope="col" class="c-no">Bài</th>
+          <th scope="col">Tên bài</th>
+          <th scope="col" class="c-lv">Mức độ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="c-no">01</td>
+          <td class="c-name"><span class="en" lang="en">Working From Home</span><span class="vi">Làm việc ở nhà</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-01-working-from-home.html" aria-label="Bài 01, trình độ A1: Working From Home">A1</a><a class="lv" href="a2/bai-01-working-from-home.html" aria-label="Bài 01, trình độ A2: Working From Home">A2</a><a class="lv" href="b1/bai-01-working-from-home.html" aria-label="Bài 01, trình độ B1: Working From Home">B1</a><a class="lv" href="b2/bai-01-working-from-home.html" aria-label="Bài 01, trình độ B2: Working From Home">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">02</td>
+          <td class="c-name"><span class="en" lang="en">Moving to a New City</span><span class="vi">Chuyển đến thành phố mới</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-02-moving-to-a-new-city.html" aria-label="Bài 02, trình độ A1: Moving to a New City">A1</a><a class="lv" href="a2/bai-02-moving-to-a-new-city.html" aria-label="Bài 02, trình độ A2: Moving to a New City">A2</a><a class="lv" href="b1/bai-02-moving-to-a-new-city.html" aria-label="Bài 02, trình độ B1: Moving to a New City">B1</a><a class="lv" href="b2/bai-02-moving-to-a-new-city.html" aria-label="Bài 02, trình độ B2: Moving to a New City">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">03</td>
+          <td class="c-name"><span class="en" lang="en">Visiting the Doctor</span><span class="vi">Đi khám bác sĩ</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-03-visiting-the-doctor.html" aria-label="Bài 03, trình độ A1: Visiting the Doctor">A1</a><a class="lv" href="a2/bai-03-visiting-the-doctor.html" aria-label="Bài 03, trình độ A2: Visiting the Doctor">A2</a><a class="lv" href="b1/bai-03-visiting-the-doctor.html" aria-label="Bài 03, trình độ B1: Visiting the Doctor">B1</a><a class="lv" href="b2/bai-03-visiting-the-doctor.html" aria-label="Bài 03, trình độ B2: Visiting the Doctor">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">04</td>
+          <td class="c-name"><span class="en" lang="en">Learning to Cook</span><span class="vi">Học nấu ăn</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-04-learning-to-cook.html" aria-label="Bài 04, trình độ A1: Learning to Cook">A1</a><a class="lv" href="a2/bai-04-learning-to-cook.html" aria-label="Bài 04, trình độ A2: Learning to Cook">A2</a><a class="lv" href="b1/bai-04-learning-to-cook.html" aria-label="Bài 04, trình độ B1: Learning to Cook">B1</a><a class="lv" href="b2/bai-04-learning-to-cook.html" aria-label="Bài 04, trình độ B2: Learning to Cook">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">05</td>
+          <td class="c-name"><span class="en" lang="en">Job Interview</span><span class="vi">Buổi phỏng vấn xin việc</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-05-job-interview.html" aria-label="Bài 05, trình độ A1: Job Interview">A1</a><a class="lv" href="a2/bai-05-job-interview.html" aria-label="Bài 05, trình độ A2: Job Interview">A2</a><a class="lv" href="b1/bai-05-job-interview.html" aria-label="Bài 05, trình độ B1: Job Interview">B1</a><a class="lv" href="b2/bai-05-job-interview.html" aria-label="Bài 05, trình độ B2: Job Interview">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">06</td>
+          <td class="c-name"><span class="en" lang="en">Online Shopping</span><span class="vi">Mua sắm trực tuyến</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-06-online-shopping.html" aria-label="Bài 06, trình độ A1: Online Shopping">A1</a><a class="lv" href="a2/bai-06-online-shopping.html" aria-label="Bài 06, trình độ A2: Online Shopping">A2</a><a class="lv" href="b1/bai-06-online-shopping.html" aria-label="Bài 06, trình độ B1: Online Shopping">B1</a><a class="lv" href="b2/bai-06-online-shopping.html" aria-label="Bài 06, trình độ B2: Online Shopping">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">07</td>
+          <td class="c-name"><span class="en" lang="en">Missing the Train</span><span class="vi">Lỡ chuyến tàu</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-07-missing-the-train.html" aria-label="Bài 07, trình độ A1: Missing the Train">A1</a><a class="lv" href="a2/bai-07-missing-the-train.html" aria-label="Bài 07, trình độ A2: Missing the Train">A2</a><a class="lv" href="b1/bai-07-missing-the-train.html" aria-label="Bài 07, trình độ B1: Missing the Train">B1</a><a class="lv" href="b2/bai-07-missing-the-train.html" aria-label="Bài 07, trình độ B2: Missing the Train">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">08</td>
+          <td class="c-name"><span class="en" lang="en">Going to the Gym</span><span class="vi">Đi tập gym</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-08-going-to-the-gym.html" aria-label="Bài 08, trình độ A1: Going to the Gym">A1</a><a class="lv" href="a2/bai-08-going-to-the-gym.html" aria-label="Bài 08, trình độ A2: Going to the Gym">A2</a><a class="lv" href="b1/bai-08-going-to-the-gym.html" aria-label="Bài 08, trình độ B1: Going to the Gym">B1</a><a class="lv" href="b2/bai-08-going-to-the-gym.html" aria-label="Bài 08, trình độ B2: Going to the Gym">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">09</td>
+          <td class="c-name"><span class="en" lang="en">Going to the Movies</span><span class="vi">Đi xem phim</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-09-going-to-the-movies.html" aria-label="Bài 09, trình độ A1: Going to the Movies">A1</a><a class="lv" href="a2/bai-09-going-to-the-movies.html" aria-label="Bài 09, trình độ A2: Going to the Movies">A2</a><a class="lv" href="b1/bai-09-going-to-the-movies.html" aria-label="Bài 09, trình độ B1: Going to the Movies">B1</a><a class="lv" href="b2/bai-09-going-to-the-movies.html" aria-label="Bài 09, trình độ B2: Going to the Movies">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">10</td>
+          <td class="c-name"><span class="en" lang="en">A Flight Delay</span><span class="vi">Chuyến bay bị hoãn</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-10-flight-delay.html" aria-label="Bài 10, trình độ A1: A Flight Delay">A1</a><a class="lv" href="a2/bai-10-flight-delay.html" aria-label="Bài 10, trình độ A2: A Flight Delay">A2</a><a class="lv" href="b1/bai-10-flight-delay.html" aria-label="Bài 10, trình độ B1: A Flight Delay">B1</a><a class="lv" href="b2/bai-10-flight-delay.html" aria-label="Bài 10, trình độ B2: A Flight Delay">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">11</td>
+          <td class="c-name"><span class="en" lang="en">Opening a Bank Account</span><span class="vi">Mở tài khoản ngân hàng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-11-opening-a-bank-account.html" aria-label="Bài 11, trình độ A1: Opening a Bank Account">A1</a><a class="lv" href="a2/bai-11-opening-a-bank-account.html" aria-label="Bài 11, trình độ A2: Opening a Bank Account">A2</a><a class="lv" href="b1/bai-11-opening-a-bank-account.html" aria-label="Bài 11, trình độ B1: Opening a Bank Account">B1</a><a class="lv" href="b2/bai-11-opening-a-bank-account.html" aria-label="Bài 11, trình độ B2: Opening a Bank Account">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">12</td>
+          <td class="c-name"><span class="en" lang="en">Losing My Phone</span><span class="vi">Làm mất điện thoại</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-12-losing-my-phone.html" aria-label="Bài 12, trình độ A1: Losing My Phone">A1</a><a class="lv" href="a2/bai-12-losing-my-phone.html" aria-label="Bài 12, trình độ A2: Losing My Phone">A2</a><a class="lv" href="b1/bai-12-losing-my-phone.html" aria-label="Bài 12, trình độ B1: Losing My Phone">B1</a><a class="lv" href="b2/bai-12-losing-my-phone.html" aria-label="Bài 12, trình độ B2: Losing My Phone">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">13</td>
+          <td class="c-name"><span class="en" lang="en">Buying a Used Car</span><span class="vi">Mua xe cũ</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-13-buying-a-used-car.html" aria-label="Bài 13, trình độ A1: Buying a Used Car">A1</a><a class="lv" href="a2/bai-13-buying-a-used-car.html" aria-label="Bài 13, trình độ A2: Buying a Used Car">A2</a><a class="lv" href="b1/bai-13-buying-a-used-car.html" aria-label="Bài 13, trình độ B1: Buying a Used Car">B1</a><a class="lv" href="b2/bai-13-buying-a-used-car.html" aria-label="Bài 13, trình độ B2: Buying a Used Car">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">14</td>
+          <td class="c-name"><span class="en" lang="en">A Noisy Neighbor</span><span class="vi">Hàng xóm ồn ào</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-14-a-noisy-neighbor.html" aria-label="Bài 14, trình độ A1: A Noisy Neighbor">A1</a><a class="lv" href="a2/bai-14-a-noisy-neighbor.html" aria-label="Bài 14, trình độ A2: A Noisy Neighbor">A2</a><a class="lv" href="b1/bai-14-a-noisy-neighbor.html" aria-label="Bài 14, trình độ B1: A Noisy Neighbor">B1</a><a class="lv" href="b2/bai-14-a-noisy-neighbor.html" aria-label="Bài 14, trình độ B2: A Noisy Neighbor">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">15</td>
+          <td class="c-name"><span class="en" lang="en">Learning English</span><span class="vi">Học tiếng Anh</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-15-learning-english.html" aria-label="Bài 15, trình độ A1: Learning English">A1</a><a class="lv" href="a2/bai-15-learning-english.html" aria-label="Bài 15, trình độ A2: Learning English">A2</a><a class="lv" href="b1/bai-15-learning-english.html" aria-label="Bài 15, trình độ B1: Learning English">B1</a><a class="lv" href="b2/bai-15-learning-english.html" aria-label="Bài 15, trình độ B2: Learning English">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">16</td>
+          <td class="c-name"><span class="en" lang="en">Planning a Surprise Party</span><span class="vi">Tổ chức tiệc bất ngờ</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-16-planning-a-surprise-party.html" aria-label="Bài 16, trình độ A1: Planning a Surprise Party">A1</a><a class="lv" href="a2/bai-16-planning-a-surprise-party.html" aria-label="Bài 16, trình độ A2: Planning a Surprise Party">A2</a><a class="lv" href="b1/bai-16-planning-a-surprise-party.html" aria-label="Bài 16, trình độ B1: Planning a Surprise Party">B1</a><a class="lv" href="b2/bai-16-planning-a-surprise-party.html" aria-label="Bài 16, trình độ B2: Planning a Surprise Party">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">17</td>
+          <td class="c-name"><span class="en" lang="en">Renting an Apartment</span><span class="vi">Thuê căn hộ</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-17-renting-an-apartment.html" aria-label="Bài 17, trình độ A1: Renting an Apartment">A1</a><a class="lv" href="a2/bai-17-renting-an-apartment.html" aria-label="Bài 17, trình độ A2: Renting an Apartment">A2</a><a class="lv" href="b1/bai-17-renting-an-apartment.html" aria-label="Bài 17, trình độ B1: Renting an Apartment">B1</a><a class="lv" href="b2/bai-17-renting-an-apartment.html" aria-label="Bài 17, trình độ B2: Renting an Apartment">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">18</td>
+          <td class="c-name"><span class="en" lang="en">Ordering at a Restaurant</span><span class="vi">Gọi món ở nhà hàng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-18-ordering-at-a-restaurant.html" aria-label="Bài 18, trình độ A1: Ordering at a Restaurant">A1</a><a class="lv" href="a2/bai-18-ordering-at-a-restaurant.html" aria-label="Bài 18, trình độ A2: Ordering at a Restaurant">A2</a><a class="lv" href="b1/bai-18-ordering-at-a-restaurant.html" aria-label="Bài 18, trình độ B1: Ordering at a Restaurant">B1</a><a class="lv" href="b2/bai-18-ordering-at-a-restaurant.html" aria-label="Bài 18, trình độ B2: Ordering at a Restaurant">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">19</td>
+          <td class="c-name"><span class="en" lang="en">Stuck in Traffic</span><span class="vi">Kẹt xe</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-19-stuck-in-traffic.html" aria-label="Bài 19, trình độ A1: Stuck in Traffic">A1</a><a class="lv" href="a2/bai-19-stuck-in-traffic.html" aria-label="Bài 19, trình độ A2: Stuck in Traffic">A2</a><a class="lv" href="b1/bai-19-stuck-in-traffic.html" aria-label="Bài 19, trình độ B1: Stuck in Traffic">B1</a><a class="lv" href="b2/bai-19-stuck-in-traffic.html" aria-label="Bài 19, trình độ B2: Stuck in Traffic">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">20</td>
+          <td class="c-name"><span class="en" lang="en">Returning a Faulty Product</span><span class="vi">Trả lại hàng bị lỗi</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-20-returning-a-faulty-product.html" aria-label="Bài 20, trình độ A1: Returning a Faulty Product">A1</a><a class="lv" href="a2/bai-20-returning-a-faulty-product.html" aria-label="Bài 20, trình độ A2: Returning a Faulty Product">A2</a><a class="lv" href="b1/bai-20-returning-a-faulty-product.html" aria-label="Bài 20, trình độ B1: Returning a Faulty Product">B1</a><a class="lv" href="b2/bai-20-returning-a-faulty-product.html" aria-label="Bài 20, trình độ B2: Returning a Faulty Product">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">21</td>
+          <td class="c-name"><span class="en" lang="en">Going Camping</span><span class="vi">Đi cắm trại</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-21-going-camping.html" aria-label="Bài 21, trình độ A1: Going Camping">A1</a><a class="lv" href="a2/bai-21-going-camping.html" aria-label="Bài 21, trình độ A2: Going Camping">A2</a><a class="lv" href="b1/bai-21-going-camping.html" aria-label="Bài 21, trình độ B1: Going Camping">B1</a><a class="lv" href="b2/bai-21-going-camping.html" aria-label="Bài 21, trình độ B2: Going Camping">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">22</td>
+          <td class="c-name"><span class="en" lang="en">A Yoga Class</span><span class="vi">Lớp yoga</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-22-a-yoga-class.html" aria-label="Bài 22, trình độ A1: A Yoga Class">A1</a><a class="lv" href="a2/bai-22-a-yoga-class.html" aria-label="Bài 22, trình độ A2: A Yoga Class">A2</a><a class="lv" href="b1/bai-22-a-yoga-class.html" aria-label="Bài 22, trình độ B1: A Yoga Class">B1</a><a class="lv" href="b2/bai-22-a-yoga-class.html" aria-label="Bài 22, trình độ B2: A Yoga Class">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">23</td>
+          <td class="c-name"><span class="en" lang="en">Getting a Haircut</span><span class="vi">Đi cắt tóc</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-23-getting-a-haircut.html" aria-label="Bài 23, trình độ A1: Getting a Haircut">A1</a><a class="lv" href="a2/bai-23-getting-a-haircut.html" aria-label="Bài 23, trình độ A2: Getting a Haircut">A2</a><a class="lv" href="b1/bai-23-getting-a-haircut.html" aria-label="Bài 23, trình độ B1: Getting a Haircut">B1</a><a class="lv" href="b2/bai-23-getting-a-haircut.html" aria-label="Bài 23, trình độ B2: Getting a Haircut">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">24</td>
+          <td class="c-name"><span class="en" lang="en">Fixing a Leaky Faucet</span><span class="vi">Sửa vòi nước bị rò</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-24-fixing-a-leaky-faucet.html" aria-label="Bài 24, trình độ A1: Fixing a Leaky Faucet">A1</a><a class="lv" href="a2/bai-24-fixing-a-leaky-faucet.html" aria-label="Bài 24, trình độ A2: Fixing a Leaky Faucet">A2</a><a class="lv" href="b1/bai-24-fixing-a-leaky-faucet.html" aria-label="Bài 24, trình độ B1: Fixing a Leaky Faucet">B1</a><a class="lv" href="b2/bai-24-fixing-a-leaky-faucet.html" aria-label="Bài 24, trình độ B2: Fixing a Leaky Faucet">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">25</td>
+          <td class="c-name"><span class="en" lang="en">Renewing My Passport</span><span class="vi">Gia hạn hộ chiếu</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-25-renewing-my-passport.html" aria-label="Bài 25, trình độ A1: Renewing My Passport">A1</a><a class="lv" href="a2/bai-25-renewing-my-passport.html" aria-label="Bài 25, trình độ A2: Renewing My Passport">A2</a><a class="lv" href="b1/bai-25-renewing-my-passport.html" aria-label="Bài 25, trình độ B1: Renewing My Passport">B1</a><a class="lv" href="b2/bai-25-renewing-my-passport.html" aria-label="Bài 25, trình độ B2: Renewing My Passport">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">26</td>
+          <td class="c-name"><span class="en" lang="en">Joining a Book Club</span><span class="vi">Tham gia câu lạc bộ sách</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-26-joining-a-book-club.html" aria-label="Bài 26, trình độ A1: Joining a Book Club">A1</a><a class="lv" href="a2/bai-26-joining-a-book-club.html" aria-label="Bài 26, trình độ A2: Joining a Book Club">A2</a><a class="lv" href="b1/bai-26-joining-a-book-club.html" aria-label="Bài 26, trình độ B1: Joining a Book Club">B1</a><a class="lv" href="b2/bai-26-joining-a-book-club.html" aria-label="Bài 26, trình độ B2: Joining a Book Club">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">27</td>
+          <td class="c-name"><span class="en" lang="en">Getting Lost in a New Town</span><span class="vi">Lạc đường ở thành phố mới</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-27-getting-lost-in-a-new-town.html" aria-label="Bài 27, trình độ A1: Getting Lost in a New Town">A1</a><a class="lv" href="a2/bai-27-getting-lost-in-a-new-town.html" aria-label="Bài 27, trình độ A2: Getting Lost in a New Town">A2</a><a class="lv" href="b1/bai-27-getting-lost-in-a-new-town.html" aria-label="Bài 27, trình độ B1: Getting Lost in a New Town">B1</a><a class="lv" href="b2/bai-27-getting-lost-in-a-new-town.html" aria-label="Bài 27, trình độ B2: Getting Lost in a New Town">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">28</td>
+          <td class="c-name"><span class="en" lang="en">Learning to Drive</span><span class="vi">Học lái xe</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-28-learning-to-drive.html" aria-label="Bài 28, trình độ A1: Learning to Drive">A1</a><a class="lv" href="a2/bai-28-learning-to-drive.html" aria-label="Bài 28, trình độ A2: Learning to Drive">A2</a><a class="lv" href="b1/bai-28-learning-to-drive.html" aria-label="Bài 28, trình độ B1: Learning to Drive">B1</a><a class="lv" href="b2/bai-28-learning-to-drive.html" aria-label="Bài 28, trình độ B2: Learning to Drive">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">29</td>
+          <td class="c-name"><span class="en" lang="en">Asking for a Raise</span><span class="vi">Xin tăng lương</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-29-asking-for-a-raise.html" aria-label="Bài 29, trình độ A1: Asking for a Raise">A1</a><a class="lv" href="a2/bai-29-asking-for-a-raise.html" aria-label="Bài 29, trình độ A2: Asking for a Raise">A2</a><a class="lv" href="b1/bai-29-asking-for-a-raise.html" aria-label="Bài 29, trình độ B1: Asking for a Raise">B1</a><a class="lv" href="b2/bai-29-asking-for-a-raise.html" aria-label="Bài 29, trình độ B2: Asking for a Raise">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">30</td>
+          <td class="c-name"><span class="en" lang="en">Working Out a Budget</span><span class="vi">Lập ngân sách chi tiêu</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-30-working-out-a-budget.html" aria-label="Bài 30, trình độ A1: Working Out a Budget">A1</a><a class="lv" href="a2/bai-30-working-out-a-budget.html" aria-label="Bài 30, trình độ A2: Working Out a Budget">A2</a><a class="lv" href="b1/bai-30-working-out-a-budget.html" aria-label="Bài 30, trình độ B1: Working Out a Budget">B1</a><a class="lv" href="b2/bai-30-working-out-a-budget.html" aria-label="Bài 30, trình độ B2: Working Out a Budget">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">31</td>
+          <td class="c-name"><span class="en" lang="en">Adopting a Dog</span><span class="vi">Nhận nuôi một chú chó</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-31-adopting-a-dog.html" aria-label="Bài 31, trình độ A1: Adopting a Dog">A1</a><a class="lv" href="a2/bai-31-adopting-a-dog.html" aria-label="Bài 31, trình độ A2: Adopting a Dog">A2</a><a class="lv" href="b1/bai-31-adopting-a-dog.html" aria-label="Bài 31, trình độ B1: Adopting a Dog">B1</a><a class="lv" href="b2/bai-31-adopting-a-dog.html" aria-label="Bài 31, trình độ B2: Adopting a Dog">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">32</td>
+          <td class="c-name"><span class="en" lang="en">Calling Customer Service</span><span class="vi">Gọi tổng đài chăm sóc khách hàng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-32-calling-customer-service.html" aria-label="Bài 32, trình độ A1: Calling Customer Service">A1</a><a class="lv" href="a2/bai-32-calling-customer-service.html" aria-label="Bài 32, trình độ A2: Calling Customer Service">A2</a><a class="lv" href="b1/bai-32-calling-customer-service.html" aria-label="Bài 32, trình độ B1: Calling Customer Service">B1</a><a class="lv" href="b2/bai-32-calling-customer-service.html" aria-label="Bài 32, trình độ B2: Calling Customer Service">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">33</td>
+          <td class="c-name"><span class="en" lang="en">Growing Vegetables</span><span class="vi">Bắt đầu trồng rau</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-33-growing-vegetables.html" aria-label="Bài 33, trình độ A1: Growing Vegetables">A1</a><a class="lv" href="a2/bai-33-growing-vegetables.html" aria-label="Bài 33, trình độ A2: Growing Vegetables">A2</a><a class="lv" href="b1/bai-33-growing-vegetables.html" aria-label="Bài 33, trình độ B1: Growing Vegetables">B1</a><a class="lv" href="b2/bai-33-growing-vegetables.html" aria-label="Bài 33, trình độ B2: Growing Vegetables">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">34</td>
+          <td class="c-name"><span class="en" lang="en">A Rainy Weekend</span><span class="vi">Một cuối tuần mưa</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-34-a-rainy-weekend.html" aria-label="Bài 34, trình độ A1: A Rainy Weekend">A1</a><a class="lv" href="a2/bai-34-a-rainy-weekend.html" aria-label="Bài 34, trình độ A2: A Rainy Weekend">A2</a><a class="lv" href="b1/bai-34-a-rainy-weekend.html" aria-label="Bài 34, trình độ B1: A Rainy Weekend">B1</a><a class="lv" href="b2/bai-34-a-rainy-weekend.html" aria-label="Bài 34, trình độ B2: A Rainy Weekend">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">35</td>
+          <td class="c-name"><span class="en" lang="en">Giving a Presentation</span><span class="vi">Thuyết trình</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-35-giving-a-presentation.html" aria-label="Bài 35, trình độ A1: Giving a Presentation">A1</a><a class="lv" href="a2/bai-35-giving-a-presentation.html" aria-label="Bài 35, trình độ A2: Giving a Presentation">A2</a><a class="lv" href="b1/bai-35-giving-a-presentation.html" aria-label="Bài 35, trình độ B1: Giving a Presentation">B1</a><a class="lv" href="b2/bai-35-giving-a-presentation.html" aria-label="Bài 35, trình độ B2: Giving a Presentation">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">36</td>
+          <td class="c-name"><span class="en" lang="en">Running My First Marathon</span><span class="vi">Lần đầu chạy marathon</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-36-running-my-first-marathon.html" aria-label="Bài 36, trình độ A1: Running My First Marathon">A1</a><a class="lv" href="a2/bai-36-running-my-first-marathon.html" aria-label="Bài 36, trình độ A2: Running My First Marathon">A2</a><a class="lv" href="b1/bai-36-running-my-first-marathon.html" aria-label="Bài 36, trình độ B1: Running My First Marathon">B1</a><a class="lv" href="b2/bai-36-running-my-first-marathon.html" aria-label="Bài 36, trình độ B2: Running My First Marathon">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">37</td>
+          <td class="c-name"><span class="en" lang="en">Learning to Swim</span><span class="vi">Học bơi</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-37-learning-to-swim.html" aria-label="Bài 37, trình độ A1: Learning to Swim">A1</a><a class="lv" href="a2/bai-37-learning-to-swim.html" aria-label="Bài 37, trình độ A2: Learning to Swim">A2</a><a class="lv" href="b1/bai-37-learning-to-swim.html" aria-label="Bài 37, trình độ B1: Learning to Swim">B1</a><a class="lv" href="b2/bai-37-learning-to-swim.html" aria-label="Bài 37, trình độ B2: Learning to Swim">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">38</td>
+          <td class="c-name"><span class="en" lang="en">Cleaning the Kitchen</span><span class="vi">Dọn dẹp bếp</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-38-cleaning-the-kitchen.html" aria-label="Bài 38, trình độ A1: Cleaning the Kitchen">A1</a><a class="lv" href="a2/bai-38-cleaning-the-kitchen.html" aria-label="Bài 38, trình độ A2: Cleaning the Kitchen">A2</a><a class="lv" href="b1/bai-38-cleaning-the-kitchen.html" aria-label="Bài 38, trình độ B1: Cleaning the Kitchen">B1</a><a class="lv" href="b2/bai-38-cleaning-the-kitchen.html" aria-label="Bài 38, trình độ B2: Cleaning the Kitchen">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">39</td>
+          <td class="c-name"><span class="en" lang="en">Going to the Dentist</span><span class="vi">Đi khám răng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-39-going-to-the-dentist.html" aria-label="Bài 39, trình độ A1: Going to the Dentist">A1</a><a class="lv" href="a2/bai-39-going-to-the-dentist.html" aria-label="Bài 39, trình độ A2: Going to the Dentist">A2</a><a class="lv" href="b1/bai-39-going-to-the-dentist.html" aria-label="Bài 39, trình độ B1: Going to the Dentist">B1</a><a class="lv" href="b2/bai-39-going-to-the-dentist.html" aria-label="Bài 39, trình độ B2: Going to the Dentist">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">40</td>
+          <td class="c-name"><span class="en" lang="en">A Wedding Invitation</span><span class="vi">Thiệp mời đám cưới</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-40-a-wedding-invitation.html" aria-label="Bài 40, trình độ A1: A Wedding Invitation">A1</a><a class="lv" href="a2/bai-40-a-wedding-invitation.html" aria-label="Bài 40, trình độ A2: A Wedding Invitation">A2</a><a class="lv" href="b1/bai-40-a-wedding-invitation.html" aria-label="Bài 40, trình độ B1: A Wedding Invitation">B1</a><a class="lv" href="b2/bai-40-a-wedding-invitation.html" aria-label="Bài 40, trình độ B2: A Wedding Invitation">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">41</td>
+          <td class="c-name"><span class="en" lang="en">Buying Groceries</span><span class="vi">Đi siêu thị</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-41-buying-groceries.html" aria-label="Bài 41, trình độ A1: Buying Groceries">A1</a><a class="lv" href="a2/bai-41-buying-groceries.html" aria-label="Bài 41, trình độ A2: Buying Groceries">A2</a><a class="lv" href="b1/bai-41-buying-groceries.html" aria-label="Bài 41, trình độ B1: Buying Groceries">B1</a><a class="lv" href="b2/bai-41-buying-groceries.html" aria-label="Bài 41, trình độ B2: Buying Groceries">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">42</td>
+          <td class="c-name"><span class="en" lang="en">Sending a Package</span><span class="vi">Gửi bưu kiện</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-42-sending-a-package.html" aria-label="Bài 42, trình độ A1: Sending a Package">A1</a><a class="lv" href="a2/bai-42-sending-a-package.html" aria-label="Bài 42, trình độ A2: Sending a Package">A2</a><a class="lv" href="b1/bai-42-sending-a-package.html" aria-label="Bài 42, trình độ B1: Sending a Package">B1</a><a class="lv" href="b2/bai-42-sending-a-package.html" aria-label="Bài 42, trình độ B2: Sending a Package">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">43</td>
+          <td class="c-name"><span class="en" lang="en">Taking the Bus</span><span class="vi">Đi xe buýt</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-43-taking-the-bus.html" aria-label="Bài 43, trình độ A1: Taking the Bus">A1</a><a class="lv" href="a2/bai-43-taking-the-bus.html" aria-label="Bài 43, trình độ A2: Taking the Bus">A2</a><a class="lv" href="b1/bai-43-taking-the-bus.html" aria-label="Bài 43, trình độ B1: Taking the Bus">B1</a><a class="lv" href="b2/bai-43-taking-the-bus.html" aria-label="Bài 43, trình độ B2: Taking the Bus">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">44</td>
+          <td class="c-name"><span class="en" lang="en">Applying for a Loan</span><span class="vi">Xin vay tiền</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-44-applying-for-a-loan.html" aria-label="Bài 44, trình độ A1: Applying for a Loan">A1</a><a class="lv" href="a2/bai-44-applying-for-a-loan.html" aria-label="Bài 44, trình độ A2: Applying for a Loan">A2</a><a class="lv" href="b1/bai-44-applying-for-a-loan.html" aria-label="Bài 44, trình độ B1: Applying for a Loan">B1</a><a class="lv" href="b2/bai-44-applying-for-a-loan.html" aria-label="Bài 44, trình độ B2: Applying for a Loan">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">45</td>
+          <td class="c-name"><span class="en" lang="en">Paying Taxes</span><span class="vi">Nộp thuế</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-45-paying-taxes.html" aria-label="Bài 45, trình độ A1: Paying Taxes">A1</a><a class="lv" href="a2/bai-45-paying-taxes.html" aria-label="Bài 45, trình độ A2: Paying Taxes">A2</a><a class="lv" href="b1/bai-45-paying-taxes.html" aria-label="Bài 45, trình độ B1: Paying Taxes">B1</a><a class="lv" href="b2/bai-45-paying-taxes.html" aria-label="Bài 45, trình độ B2: Paying Taxes">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">46</td>
+          <td class="c-name"><span class="en" lang="en">Keeping a Diary</span><span class="vi">Viết nhật ký</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-46-keeping-a-diary.html" aria-label="Bài 46, trình độ A1: Keeping a Diary">A1</a><a class="lv" href="a2/bai-46-keeping-a-diary.html" aria-label="Bài 46, trình độ A2: Keeping a Diary">A2</a><a class="lv" href="b1/bai-46-keeping-a-diary.html" aria-label="Bài 46, trình độ B1: Keeping a Diary">B1</a><a class="lv" href="b2/bai-46-keeping-a-diary.html" aria-label="Bài 46, trình độ B2: Keeping a Diary">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">47</td>
+          <td class="c-name"><span class="en" lang="en">Going to a Concert</span><span class="vi">Đi xem hòa nhạc</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-47-going-to-a-concert.html" aria-label="Bài 47, trình độ A1: Going to a Concert">A1</a><a class="lv" href="a2/bai-47-going-to-a-concert.html" aria-label="Bài 47, trình độ A2: Going to a Concert">A2</a><a class="lv" href="b1/bai-47-going-to-a-concert.html" aria-label="Bài 47, trình độ B1: Going to a Concert">B1</a><a class="lv" href="b2/bai-47-going-to-a-concert.html" aria-label="Bài 47, trình độ B2: Going to a Concert">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">48</td>
+          <td class="c-name"><span class="en" lang="en">Fixing My Bicycle</span><span class="vi">Sửa xe đạp</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-48-fixing-my-bicycle.html" aria-label="Bài 48, trình độ A1: Fixing My Bicycle">A1</a><a class="lv" href="a2/bai-48-fixing-my-bicycle.html" aria-label="Bài 48, trình độ A2: Fixing My Bicycle">A2</a><a class="lv" href="b1/bai-48-fixing-my-bicycle.html" aria-label="Bài 48, trình độ B1: Fixing My Bicycle">B1</a><a class="lv" href="b2/bai-48-fixing-my-bicycle.html" aria-label="Bài 48, trình độ B2: Fixing My Bicycle">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">49</td>
+          <td class="c-name"><span class="en" lang="en">Learning the Guitar</span><span class="vi">Học đàn guitar</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-49-learning-the-guitar.html" aria-label="Bài 49, trình độ A1: Learning the Guitar">A1</a><a class="lv" href="a2/bai-49-learning-the-guitar.html" aria-label="Bài 49, trình độ A2: Learning the Guitar">A2</a><a class="lv" href="b1/bai-49-learning-the-guitar.html" aria-label="Bài 49, trình độ B1: Learning the Guitar">B1</a><a class="lv" href="b2/bai-49-learning-the-guitar.html" aria-label="Bài 49, trình độ B2: Learning the Guitar">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">50</td>
+          <td class="c-name"><span class="en" lang="en">Visiting a Museum</span><span class="vi">Đi bảo tàng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-50-visiting-a-museum.html" aria-label="Bài 50, trình độ A1: Visiting a Museum">A1</a><a class="lv" href="a2/bai-50-visiting-a-museum.html" aria-label="Bài 50, trình độ A2: Visiting a Museum">A2</a><a class="lv" href="b1/bai-50-visiting-a-museum.html" aria-label="Bài 50, trình độ B1: Visiting a Museum">B1</a><a class="lv" href="b2/bai-50-visiting-a-museum.html" aria-label="Bài 50, trình độ B2: Visiting a Museum">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">51</td>
+          <td class="c-name"><span class="en" lang="en">Visiting My Grandparents</span><span class="vi">Thăm ông bà</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-51-visiting-my-grandparents.html" aria-label="Bài 51, trình độ A1: Visiting My Grandparents">A1</a><a class="lv" href="a2/bai-51-visiting-my-grandparents.html" aria-label="Bài 51, trình độ A2: Visiting My Grandparents">A2</a><a class="lv" href="b1/bai-51-visiting-my-grandparents.html" aria-label="Bài 51, trình độ B1: Visiting My Grandparents">B1</a><a class="lv" href="b2/bai-51-visiting-my-grandparents.html" aria-label="Bài 51, trình độ B2: Visiting My Grandparents">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">52</td>
+          <td class="c-name"><span class="en" lang="en">Making Friends Online</span><span class="vi">Kết bạn trên mạng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-52-making-friends-online.html" aria-label="Bài 52, trình độ A1: Making Friends Online">A1</a><a class="lv" href="a2/bai-52-making-friends-online.html" aria-label="Bài 52, trình độ A2: Making Friends Online">A2</a><a class="lv" href="b1/bai-52-making-friends-online.html" aria-label="Bài 52, trình độ B1: Making Friends Online">B1</a><a class="lv" href="b2/bai-52-making-friends-online.html" aria-label="Bài 52, trình độ B2: Making Friends Online">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">53</td>
+          <td class="c-name"><span class="en" lang="en">Catching a Cold</span><span class="vi">Bị cảm lạnh</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-53-catching-a-cold.html" aria-label="Bài 53, trình độ A1: Catching a Cold">A1</a><a class="lv" href="a2/bai-53-catching-a-cold.html" aria-label="Bài 53, trình độ A2: Catching a Cold">A2</a><a class="lv" href="b1/bai-53-catching-a-cold.html" aria-label="Bài 53, trình độ B1: Catching a Cold">B1</a><a class="lv" href="b2/bai-53-catching-a-cold.html" aria-label="Bài 53, trình độ B2: Catching a Cold">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">54</td>
+          <td class="c-name"><span class="en" lang="en">Taking a Sick Day</span><span class="vi">Xin nghỉ ốm</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-54-taking-a-sick-day.html" aria-label="Bài 54, trình độ A1: Taking a Sick Day">A1</a><a class="lv" href="a2/bai-54-taking-a-sick-day.html" aria-label="Bài 54, trình độ A2: Taking a Sick Day">A2</a><a class="lv" href="b1/bai-54-taking-a-sick-day.html" aria-label="Bài 54, trình độ B1: Taking a Sick Day">B1</a><a class="lv" href="b2/bai-54-taking-a-sick-day.html" aria-label="Bài 54, trình độ B2: Taking a Sick Day">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">55</td>
+          <td class="c-name"><span class="en" lang="en">A Day at the Beach</span><span class="vi">Một ngày ở biển</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-55-a-day-at-the-beach.html" aria-label="Bài 55, trình độ A1: A Day at the Beach">A1</a><a class="lv" href="a2/bai-55-a-day-at-the-beach.html" aria-label="Bài 55, trình độ A2: A Day at the Beach">A2</a><a class="lv" href="b1/bai-55-a-day-at-the-beach.html" aria-label="Bài 55, trình độ B1: A Day at the Beach">B1</a><a class="lv" href="b2/bai-55-a-day-at-the-beach.html" aria-label="Bài 55, trình độ B2: A Day at the Beach">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">56</td>
+          <td class="c-name"><span class="en" lang="en">Hiking Up a Mountain</span><span class="vi">Leo núi</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-56-hiking-up-a-mountain.html" aria-label="Bài 56, trình độ A1: Hiking Up a Mountain">A1</a><a class="lv" href="a2/bai-56-hiking-up-a-mountain.html" aria-label="Bài 56, trình độ A2: Hiking Up a Mountain">A2</a><a class="lv" href="b1/bai-56-hiking-up-a-mountain.html" aria-label="Bài 56, trình độ B1: Hiking Up a Mountain">B1</a><a class="lv" href="b2/bai-56-hiking-up-a-mountain.html" aria-label="Bài 56, trình độ B2: Hiking Up a Mountain">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">57</td>
+          <td class="c-name"><span class="en" lang="en">Volunteering at a Shelter</span><span class="vi">Làm tình nguyện</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-57-volunteering-at-a-shelter.html" aria-label="Bài 57, trình độ A1: Volunteering at a Shelter">A1</a><a class="lv" href="a2/bai-57-volunteering-at-a-shelter.html" aria-label="Bài 57, trình độ A2: Volunteering at a Shelter">A2</a><a class="lv" href="b1/bai-57-volunteering-at-a-shelter.html" aria-label="Bài 57, trình độ B1: Volunteering at a Shelter">B1</a><a class="lv" href="b2/bai-57-volunteering-at-a-shelter.html" aria-label="Bài 57, trình độ B2: Volunteering at a Shelter">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">58</td>
+          <td class="c-name"><span class="en" lang="en">Writing a Resume</span><span class="vi">Viết sơ yếu lý lịch</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-58-writing-a-resume.html" aria-label="Bài 58, trình độ A1: Writing a Resume">A1</a><a class="lv" href="a2/bai-58-writing-a-resume.html" aria-label="Bài 58, trình độ A2: Writing a Resume">A2</a><a class="lv" href="b1/bai-58-writing-a-resume.html" aria-label="Bài 58, trình độ B1: Writing a Resume">B1</a><a class="lv" href="b2/bai-58-writing-a-resume.html" aria-label="Bài 58, trình độ B2: Writing a Resume">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">59</td>
+          <td class="c-name"><span class="en" lang="en">Working the Night Shift</span><span class="vi">Làm ca đêm</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-59-working-the-night-shift.html" aria-label="Bài 59, trình độ A1: Working the Night Shift">A1</a><a class="lv" href="a2/bai-59-working-the-night-shift.html" aria-label="Bài 59, trình độ A2: Working the Night Shift">A2</a><a class="lv" href="b1/bai-59-working-the-night-shift.html" aria-label="Bài 59, trình độ B1: Working the Night Shift">B1</a><a class="lv" href="b2/bai-59-working-the-night-shift.html" aria-label="Bài 59, trình độ B2: Working the Night Shift">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">60</td>
+          <td class="c-name"><span class="en" lang="en">Moving Furniture</span><span class="vi">Chuyển đồ đạc</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-60-moving-furniture.html" aria-label="Bài 60, trình độ A1: Moving Furniture">A1</a><a class="lv" href="a2/bai-60-moving-furniture.html" aria-label="Bài 60, trình độ A2: Moving Furniture">A2</a><a class="lv" href="b1/bai-60-moving-furniture.html" aria-label="Bài 60, trình độ B1: Moving Furniture">B1</a><a class="lv" href="b2/bai-60-moving-furniture.html" aria-label="Bài 60, trình độ B2: Moving Furniture">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">61</td>
+          <td class="c-name"><span class="en" lang="en">Painting a Room</span><span class="vi">Sơn lại phòng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-61-painting-a-room.html" aria-label="Bài 61, trình độ A1: Painting a Room">A1</a><a class="lv" href="a2/bai-61-painting-a-room.html" aria-label="Bài 61, trình độ A2: Painting a Room">A2</a><a class="lv" href="b1/bai-61-painting-a-room.html" aria-label="Bài 61, trình độ B1: Painting a Room">B1</a><a class="lv" href="b2/bai-61-painting-a-room.html" aria-label="Bài 61, trình độ B2: Painting a Room">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">62</td>
+          <td class="c-name"><span class="en" lang="en">Watching the News</span><span class="vi">Xem tin tức</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-62-watching-the-news.html" aria-label="Bài 62, trình độ A1: Watching the News">A1</a><a class="lv" href="a2/bai-62-watching-the-news.html" aria-label="Bài 62, trình độ A2: Watching the News">A2</a><a class="lv" href="b1/bai-62-watching-the-news.html" aria-label="Bài 62, trình độ B1: Watching the News">B1</a><a class="lv" href="b2/bai-62-watching-the-news.html" aria-label="Bài 62, trình độ B2: Watching the News">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">63</td>
+          <td class="c-name"><span class="en" lang="en">Sleeping Badly</span><span class="vi">Ngủ không ngon</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-63-sleeping-badly.html" aria-label="Bài 63, trình độ A1: Sleeping Badly">A1</a><a class="lv" href="a2/bai-63-sleeping-badly.html" aria-label="Bài 63, trình độ A2: Sleeping Badly">A2</a><a class="lv" href="b1/bai-63-sleeping-badly.html" aria-label="Bài 63, trình độ B1: Sleeping Badly">B1</a><a class="lv" href="b2/bai-63-sleeping-badly.html" aria-label="Bài 63, trình độ B2: Sleeping Badly">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">64</td>
+          <td class="c-name"><span class="en" lang="en">Going on a Diet</span><span class="vi">Ăn kiêng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-64-going-on-a-diet.html" aria-label="Bài 64, trình độ A1: Going on a Diet">A1</a><a class="lv" href="a2/bai-64-going-on-a-diet.html" aria-label="Bài 64, trình độ A2: Going on a Diet">A2</a><a class="lv" href="b1/bai-64-going-on-a-diet.html" aria-label="Bài 64, trình độ B1: Going on a Diet">B1</a><a class="lv" href="b2/bai-64-going-on-a-diet.html" aria-label="Bài 64, trình độ B2: Going on a Diet">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">65</td>
+          <td class="c-name"><span class="en" lang="en">Taking an English Test</span><span class="vi">Thi tiếng Anh</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-65-taking-an-english-test.html" aria-label="Bài 65, trình độ A1: Taking an English Test">A1</a><a class="lv" href="a2/bai-65-taking-an-english-test.html" aria-label="Bài 65, trình độ A2: Taking an English Test">A2</a><a class="lv" href="b1/bai-65-taking-an-english-test.html" aria-label="Bài 65, trình độ B1: Taking an English Test">B1</a><a class="lv" href="b2/bai-65-taking-an-english-test.html" aria-label="Bài 65, trình độ B2: Taking an English Test">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">66</td>
+          <td class="c-name"><span class="en" lang="en">Attending a Conference</span><span class="vi">Dự hội thảo</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-66-attending-a-conference.html" aria-label="Bài 66, trình độ A1: Attending a Conference">A1</a><a class="lv" href="a2/bai-66-attending-a-conference.html" aria-label="Bài 66, trình độ A2: Attending a Conference">A2</a><a class="lv" href="b1/bai-66-attending-a-conference.html" aria-label="Bài 66, trình độ B1: Attending a Conference">B1</a><a class="lv" href="b2/bai-66-attending-a-conference.html" aria-label="Bài 66, trình độ B2: Attending a Conference">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">67</td>
+          <td class="c-name"><span class="en" lang="en">Booking a Hotel</span><span class="vi">Đặt phòng khách sạn</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-67-booking-a-hotel.html" aria-label="Bài 67, trình độ A1: Booking a Hotel">A1</a><a class="lv" href="a2/bai-67-booking-a-hotel.html" aria-label="Bài 67, trình độ A2: Booking a Hotel">A2</a><a class="lv" href="b1/bai-67-booking-a-hotel.html" aria-label="Bài 67, trình độ B1: Booking a Hotel">B1</a><a class="lv" href="b2/bai-67-booking-a-hotel.html" aria-label="Bài 67, trình độ B2: Booking a Hotel">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">68</td>
+          <td class="c-name"><span class="en" lang="en">Renting a Car</span><span class="vi">Thuê xe ô tô</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-68-renting-a-car.html" aria-label="Bài 68, trình độ A1: Renting a Car">A1</a><a class="lv" href="a2/bai-68-renting-a-car.html" aria-label="Bài 68, trình độ A2: Renting a Car">A2</a><a class="lv" href="b1/bai-68-renting-a-car.html" aria-label="Bài 68, trình độ B1: Renting a Car">B1</a><a class="lv" href="b2/bai-68-renting-a-car.html" aria-label="Bài 68, trình độ B2: Renting a Car">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">69</td>
+          <td class="c-name"><span class="en" lang="en">Ordering Food Delivery</span><span class="vi">Đặt đồ ăn giao tận nhà</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-69-ordering-food-delivery.html" aria-label="Bài 69, trình độ A1: Ordering Food Delivery">A1</a><a class="lv" href="a2/bai-69-ordering-food-delivery.html" aria-label="Bài 69, trình độ A2: Ordering Food Delivery">A2</a><a class="lv" href="b1/bai-69-ordering-food-delivery.html" aria-label="Bài 69, trình độ B1: Ordering Food Delivery">B1</a><a class="lv" href="b2/bai-69-ordering-food-delivery.html" aria-label="Bài 69, trình độ B2: Ordering Food Delivery">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">70</td>
+          <td class="c-name"><span class="en" lang="en">Choosing a Laptop</span><span class="vi">Mua máy tính xách tay</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-70-choosing-a-laptop.html" aria-label="Bài 70, trình độ A1: Choosing a Laptop">A1</a><a class="lv" href="a2/bai-70-choosing-a-laptop.html" aria-label="Bài 70, trình độ A2: Choosing a Laptop">A2</a><a class="lv" href="b1/bai-70-choosing-a-laptop.html" aria-label="Bài 70, trình độ B1: Choosing a Laptop">B1</a><a class="lv" href="b2/bai-70-choosing-a-laptop.html" aria-label="Bài 70, trình độ B2: Choosing a Laptop">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">71</td>
+          <td class="c-name"><span class="en" lang="en">Backing Up My Photos</span><span class="vi">Sao lưu ảnh</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-71-backing-up-my-photos.html" aria-label="Bài 71, trình độ A1: Backing Up My Photos">A1</a><a class="lv" href="a2/bai-71-backing-up-my-photos.html" aria-label="Bài 71, trình độ A2: Backing Up My Photos">A2</a><a class="lv" href="b1/bai-71-backing-up-my-photos.html" aria-label="Bài 71, trình độ B1: Backing Up My Photos">B1</a><a class="lv" href="b2/bai-71-backing-up-my-photos.html" aria-label="Bài 71, trình độ B2: Backing Up My Photos">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">72</td>
+          <td class="c-name"><span class="en" lang="en">At a Job Fair</span><span class="vi">Ở hội chợ việc làm</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-72-at-a-job-fair.html" aria-label="Bài 72, trình độ A1: At a Job Fair">A1</a><a class="lv" href="a2/bai-72-at-a-job-fair.html" aria-label="Bài 72, trình độ A2: At a Job Fair">A2</a><a class="lv" href="b1/bai-72-at-a-job-fair.html" aria-label="Bài 72, trình độ B1: At a Job Fair">B1</a><a class="lv" href="b2/bai-72-at-a-job-fair.html" aria-label="Bài 72, trình độ B2: At a Job Fair">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">73</td>
+          <td class="c-name"><span class="en" lang="en">Starting a Podcast</span><span class="vi">Làm podcast</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-73-starting-a-podcast.html" aria-label="Bài 73, trình độ A1: Starting a Podcast">A1</a><a class="lv" href="a2/bai-73-starting-a-podcast.html" aria-label="Bài 73, trình độ A2: Starting a Podcast">A2</a><a class="lv" href="b1/bai-73-starting-a-podcast.html" aria-label="Bài 73, trình độ B1: Starting a Podcast">B1</a><a class="lv" href="b2/bai-73-starting-a-podcast.html" aria-label="Bài 73, trình độ B2: Starting a Podcast">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">74</td>
+          <td class="c-name"><span class="en" lang="en">Learning Photography</span><span class="vi">Học chụp ảnh</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-74-learning-photography.html" aria-label="Bài 74, trình độ A1: Learning Photography">A1</a><a class="lv" href="a2/bai-74-learning-photography.html" aria-label="Bài 74, trình độ A2: Learning Photography">A2</a><a class="lv" href="b1/bai-74-learning-photography.html" aria-label="Bài 74, trình độ B1: Learning Photography">B1</a><a class="lv" href="b2/bai-74-learning-photography.html" aria-label="Bài 74, trình độ B2: Learning Photography">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">75</td>
+          <td class="c-name"><span class="en" lang="en">Skiing for the First Time</span><span class="vi">Trượt tuyết lần đầu</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-75-skiing-for-the-first-time.html" aria-label="Bài 75, trình độ A1: Skiing for the First Time">A1</a><a class="lv" href="a2/bai-75-skiing-for-the-first-time.html" aria-label="Bài 75, trình độ A2: Skiing for the First Time">A2</a><a class="lv" href="b1/bai-75-skiing-for-the-first-time.html" aria-label="Bài 75, trình độ B1: Skiing for the First Time">B1</a><a class="lv" href="b2/bai-75-skiing-for-the-first-time.html" aria-label="Bài 75, trình độ B2: Skiing for the First Time">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">76</td>
+          <td class="c-name"><span class="en" lang="en">Going to a Festival</span><span class="vi">Đi lễ hội âm nhạc</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-76-going-to-a-festival.html" aria-label="Bài 76, trình độ A1: Going to a Festival">A1</a><a class="lv" href="a2/bai-76-going-to-a-festival.html" aria-label="Bài 76, trình độ A2: Going to a Festival">A2</a><a class="lv" href="b1/bai-76-going-to-a-festival.html" aria-label="Bài 76, trình độ B1: Going to a Festival">B1</a><a class="lv" href="b2/bai-76-going-to-a-festival.html" aria-label="Bài 76, trình độ B2: Going to a Festival">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">77</td>
+          <td class="c-name"><span class="en" lang="en">My Lost Luggage</span><span class="vi">Hành lý thất lạc</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-77-my-lost-luggage.html" aria-label="Bài 77, trình độ A1: My Lost Luggage">A1</a><a class="lv" href="a2/bai-77-my-lost-luggage.html" aria-label="Bài 77, trình độ A2: My Lost Luggage">A2</a><a class="lv" href="b1/bai-77-my-lost-luggage.html" aria-label="Bài 77, trình độ B1: My Lost Luggage">B1</a><a class="lv" href="b2/bai-77-my-lost-luggage.html" aria-label="Bài 77, trình độ B2: My Lost Luggage">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">78</td>
+          <td class="c-name"><span class="en" lang="en">At the Pharmacy</span><span class="vi">Ở hiệu thuốc</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-78-at-the-pharmacy.html" aria-label="Bài 78, trình độ A1: At the Pharmacy">A1</a><a class="lv" href="a2/bai-78-at-the-pharmacy.html" aria-label="Bài 78, trình độ A2: At the Pharmacy">A2</a><a class="lv" href="b1/bai-78-at-the-pharmacy.html" aria-label="Bài 78, trình độ B1: At the Pharmacy">B1</a><a class="lv" href="b2/bai-78-at-the-pharmacy.html" aria-label="Bài 78, trình độ B2: At the Pharmacy">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">79</td>
+          <td class="c-name"><span class="en" lang="en">Recycling at Home</span><span class="vi">Phân loại rác tại nhà</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-79-recycling-at-home.html" aria-label="Bài 79, trình độ A1: Recycling at Home">A1</a><a class="lv" href="a2/bai-79-recycling-at-home.html" aria-label="Bài 79, trình độ A2: Recycling at Home">A2</a><a class="lv" href="b1/bai-79-recycling-at-home.html" aria-label="Bài 79, trình độ B1: Recycling at Home">B1</a><a class="lv" href="b2/bai-79-recycling-at-home.html" aria-label="Bài 79, trình độ B2: Recycling at Home">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">80</td>
+          <td class="c-name"><span class="en" lang="en">My Morning Routine</span><span class="vi">Thói quen buổi sáng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-80-my-morning-routine.html" aria-label="Bài 80, trình độ A1: My Morning Routine">A1</a><a class="lv" href="a2/bai-80-my-morning-routine.html" aria-label="Bài 80, trình độ A2: My Morning Routine">A2</a><a class="lv" href="b1/bai-80-my-morning-routine.html" aria-label="Bài 80, trình độ B1: My Morning Routine">B1</a><a class="lv" href="b2/bai-80-my-morning-routine.html" aria-label="Bài 80, trình độ B2: My Morning Routine">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">81</td>
+          <td class="c-name"><span class="en" lang="en">Visiting the Zoo</span><span class="vi">Đi sở thú</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-81-visiting-the-zoo.html" aria-label="Bài 81, trình độ A1: Visiting the Zoo">A1</a><a class="lv" href="a2/bai-81-visiting-the-zoo.html" aria-label="Bài 81, trình độ A2: Visiting the Zoo">A2</a><a class="lv" href="b1/bai-81-visiting-the-zoo.html" aria-label="Bài 81, trình độ B1: Visiting the Zoo">B1</a><a class="lv" href="b2/bai-81-visiting-the-zoo.html" aria-label="Bài 81, trình độ B2: Visiting the Zoo">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">82</td>
+          <td class="c-name"><span class="en" lang="en">Taking a Road Trip</span><span class="vi">Đi phượt bằng ô tô</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-82-taking-a-road-trip.html" aria-label="Bài 82, trình độ A1: Taking a Road Trip">A1</a><a class="lv" href="a2/bai-82-taking-a-road-trip.html" aria-label="Bài 82, trình độ A2: Taking a Road Trip">A2</a><a class="lv" href="b1/bai-82-taking-a-road-trip.html" aria-label="Bài 82, trình độ B1: Taking a Road Trip">B1</a><a class="lv" href="b2/bai-82-taking-a-road-trip.html" aria-label="Bài 82, trình độ B2: Taking a Road Trip">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">83</td>
+          <td class="c-name"><span class="en" lang="en">Sharing an Apartment</span><span class="vi">Ở ghép</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-83-sharing-an-apartment.html" aria-label="Bài 83, trình độ A1: Sharing an Apartment">A1</a><a class="lv" href="a2/bai-83-sharing-an-apartment.html" aria-label="Bài 83, trình độ A2: Sharing an Apartment">A2</a><a class="lv" href="b1/bai-83-sharing-an-apartment.html" aria-label="Bài 83, trình độ B1: Sharing an Apartment">B1</a><a class="lv" href="b2/bai-83-sharing-an-apartment.html" aria-label="Bài 83, trình độ B2: Sharing an Apartment">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">84</td>
+          <td class="c-name"><span class="en" lang="en">Becoming a Parent</span><span class="vi">Làm cha mẹ</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-84-becoming-a-parent.html" aria-label="Bài 84, trình độ A1: Becoming a Parent">A1</a><a class="lv" href="a2/bai-84-becoming-a-parent.html" aria-label="Bài 84, trình độ A2: Becoming a Parent">A2</a><a class="lv" href="b1/bai-84-becoming-a-parent.html" aria-label="Bài 84, trình độ B1: Becoming a Parent">B1</a><a class="lv" href="b2/bai-84-becoming-a-parent.html" aria-label="Bài 84, trình độ B2: Becoming a Parent">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">85</td>
+          <td class="c-name"><span class="en" lang="en">Learning to Knit</span><span class="vi">Học đan len</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-85-learning-to-knit.html" aria-label="Bài 85, trình độ A1: Learning to Knit">A1</a><a class="lv" href="a2/bai-85-learning-to-knit.html" aria-label="Bài 85, trình độ A2: Learning to Knit">A2</a><a class="lv" href="b1/bai-85-learning-to-knit.html" aria-label="Bài 85, trình độ B1: Learning to Knit">B1</a><a class="lv" href="b2/bai-85-learning-to-knit.html" aria-label="Bài 85, trình độ B2: Learning to Knit">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">86</td>
+          <td class="c-name"><span class="en" lang="en">A Charity Run</span><span class="vi">Chạy từ thiện</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-86-a-charity-run.html" aria-label="Bài 86, trình độ A1: A Charity Run">A1</a><a class="lv" href="a2/bai-86-a-charity-run.html" aria-label="Bài 86, trình độ A2: A Charity Run">A2</a><a class="lv" href="b1/bai-86-a-charity-run.html" aria-label="Bài 86, trình độ B1: A Charity Run">B1</a><a class="lv" href="b2/bai-86-a-charity-run.html" aria-label="Bài 86, trình độ B2: A Charity Run">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">87</td>
+          <td class="c-name"><span class="en" lang="en">Parent-Teacher Meeting</span><span class="vi">Họp phụ huynh</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-87-parent-teacher-meeting.html" aria-label="Bài 87, trình độ A1: Parent-Teacher Meeting">A1</a><a class="lv" href="a2/bai-87-parent-teacher-meeting.html" aria-label="Bài 87, trình độ A2: Parent-Teacher Meeting">A2</a><a class="lv" href="b1/bai-87-parent-teacher-meeting.html" aria-label="Bài 87, trình độ B1: Parent-Teacher Meeting">B1</a><a class="lv" href="b2/bai-87-parent-teacher-meeting.html" aria-label="Bài 87, trình độ B2: Parent-Teacher Meeting">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">88</td>
+          <td class="c-name"><span class="en" lang="en">Taking an Online Course</span><span class="vi">Học khóa trực tuyến</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-88-taking-an-online-course.html" aria-label="Bài 88, trình độ A1: Taking an Online Course">A1</a><a class="lv" href="a2/bai-88-taking-an-online-course.html" aria-label="Bài 88, trình độ A2: Taking an Online Course">A2</a><a class="lv" href="b1/bai-88-taking-an-online-course.html" aria-label="Bài 88, trình độ B1: Taking an Online Course">B1</a><a class="lv" href="b2/bai-88-taking-an-online-course.html" aria-label="Bài 88, trình độ B2: Taking an Online Course">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">89</td>
+          <td class="c-name"><span class="en" lang="en">Writing a Blog</span><span class="vi">Viết blog</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-89-writing-a-blog.html" aria-label="Bài 89, trình độ A1: Writing a Blog">A1</a><a class="lv" href="a2/bai-89-writing-a-blog.html" aria-label="Bài 89, trình độ A2: Writing a Blog">A2</a><a class="lv" href="b1/bai-89-writing-a-blog.html" aria-label="Bài 89, trình độ B1: Writing a Blog">B1</a><a class="lv" href="b2/bai-89-writing-a-blog.html" aria-label="Bài 89, trình độ B2: Writing a Blog">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">90</td>
+          <td class="c-name"><span class="en" lang="en">Fixing a Broken Heater</span><span class="vi">Sửa máy sưởi hỏng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-90-fixing-a-broken-heater.html" aria-label="Bài 90, trình độ A1: Fixing a Broken Heater">A1</a><a class="lv" href="a2/bai-90-fixing-a-broken-heater.html" aria-label="Bài 90, trình độ A2: Fixing a Broken Heater">A2</a><a class="lv" href="b1/bai-90-fixing-a-broken-heater.html" aria-label="Bài 90, trình độ B1: Fixing a Broken Heater">B1</a><a class="lv" href="b2/bai-90-fixing-a-broken-heater.html" aria-label="Bài 90, trình độ B2: Fixing a Broken Heater">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">91</td>
+          <td class="c-name"><span class="en" lang="en">Trying a New Café</span><span class="vi">Thử quán cà phê mới</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-91-trying-a-new-cafe.html" aria-label="Bài 91, trình độ A1: Trying a New Café">A1</a><a class="lv" href="a2/bai-91-trying-a-new-cafe.html" aria-label="Bài 91, trình độ A2: Trying a New Café">A2</a><a class="lv" href="b1/bai-91-trying-a-new-cafe.html" aria-label="Bài 91, trình độ B1: Trying a New Café">B1</a><a class="lv" href="b2/bai-91-trying-a-new-cafe.html" aria-label="Bài 91, trình độ B2: Trying a New Café">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">92</td>
+          <td class="c-name"><span class="en" lang="en">A Snowstorm</span><span class="vi">Bão tuyết</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-92-a-snowstorm.html" aria-label="Bài 92, trình độ A1: A Snowstorm">A1</a><a class="lv" href="a2/bai-92-a-snowstorm.html" aria-label="Bài 92, trình độ A2: A Snowstorm">A2</a><a class="lv" href="b1/bai-92-a-snowstorm.html" aria-label="Bài 92, trình độ B1: A Snowstorm">B1</a><a class="lv" href="b2/bai-92-a-snowstorm.html" aria-label="Bài 92, trình độ B2: A Snowstorm">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">93</td>
+          <td class="c-name"><span class="en" lang="en">A Heat Wave</span><span class="vi">Đợt nắng nóng</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-93-a-heat-wave.html" aria-label="Bài 93, trình độ A1: A Heat Wave">A1</a><a class="lv" href="a2/bai-93-a-heat-wave.html" aria-label="Bài 93, trình độ A2: A Heat Wave">A2</a><a class="lv" href="b1/bai-93-a-heat-wave.html" aria-label="Bài 93, trình độ B1: A Heat Wave">B1</a><a class="lv" href="b2/bai-93-a-heat-wave.html" aria-label="Bài 93, trình độ B2: A Heat Wave">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">94</td>
+          <td class="c-name"><span class="en" lang="en">A Power Outage</span><span class="vi">Mất điện</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-94-a-power-outage.html" aria-label="Bài 94, trình độ A1: A Power Outage">A1</a><a class="lv" href="a2/bai-94-a-power-outage.html" aria-label="Bài 94, trình độ A2: A Power Outage">A2</a><a class="lv" href="b1/bai-94-a-power-outage.html" aria-label="Bài 94, trình độ B1: A Power Outage">B1</a><a class="lv" href="b2/bai-94-a-power-outage.html" aria-label="Bài 94, trình độ B2: A Power Outage">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">95</td>
+          <td class="c-name"><span class="en" lang="en">A Phone Scam</span><span class="vi">Lừa đảo qua điện thoại</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-95-a-phone-scam.html" aria-label="Bài 95, trình độ A1: A Phone Scam">A1</a><a class="lv" href="a2/bai-95-a-phone-scam.html" aria-label="Bài 95, trình độ A2: A Phone Scam">A2</a><a class="lv" href="b1/bai-95-a-phone-scam.html" aria-label="Bài 95, trình độ B1: A Phone Scam">B1</a><a class="lv" href="b2/bai-95-a-phone-scam.html" aria-label="Bài 95, trình độ B2: A Phone Scam">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">96</td>
+          <td class="c-name"><span class="en" lang="en">Buying a House</span><span class="vi">Mua nhà</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-96-buying-a-house.html" aria-label="Bài 96, trình độ A1: Buying a House">A1</a><a class="lv" href="a2/bai-96-buying-a-house.html" aria-label="Bài 96, trình độ A2: Buying a House">A2</a><a class="lv" href="b1/bai-96-buying-a-house.html" aria-label="Bài 96, trình độ B1: Buying a House">B1</a><a class="lv" href="b2/bai-96-buying-a-house.html" aria-label="Bài 96, trình độ B2: Buying a House">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">97</td>
+          <td class="c-name"><span class="en" lang="en">Car Trouble on the Road</span><span class="vi">Xe hỏng giữa đường</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-97-car-trouble-on-the-road.html" aria-label="Bài 97, trình độ A1: Car Trouble on the Road">A1</a><a class="lv" href="a2/bai-97-car-trouble-on-the-road.html" aria-label="Bài 97, trình độ A2: Car Trouble on the Road">A2</a><a class="lv" href="b1/bai-97-car-trouble-on-the-road.html" aria-label="Bài 97, trình độ B1: Car Trouble on the Road">B1</a><a class="lv" href="b2/bai-97-car-trouble-on-the-road.html" aria-label="Bài 97, trình độ B2: Car Trouble on the Road">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">98</td>
+          <td class="c-name"><span class="en" lang="en">A Speeding Ticket</span><span class="vi">Bị phạt tốc độ</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-98-a-speeding-ticket.html" aria-label="Bài 98, trình độ A1: A Speeding Ticket">A1</a><a class="lv" href="a2/bai-98-a-speeding-ticket.html" aria-label="Bài 98, trình độ A2: A Speeding Ticket">A2</a><a class="lv" href="b1/bai-98-a-speeding-ticket.html" aria-label="Bài 98, trình độ B1: A Speeding Ticket">B1</a><a class="lv" href="b2/bai-98-a-speeding-ticket.html" aria-label="Bài 98, trình độ B2: A Speeding Ticket">B2</a></div></td>
+        </tr>
+        <tr>
+          <td class="c-no">99</td>
+          <td class="c-name"><span class="en" lang="en">Learning to Dance</span><span class="vi">Học nhảy</span></td>
+          <td class="c-lv"><div class="lvs"><a class="lv" href="a1/bai-99-learning-to-dance.html" aria-label="Bài 99, trình độ A1: Learning to Dance">A1</a><a class="lv" href="a2/bai-99-learning-to-dance.html" aria-label="Bài 99, trình độ A2: Learning to Dance">A2</a><a class="lv" href="b1/bai-99-learning-to-dance.html" aria-label="Bài 99, trình độ B1: Learning to Dance">B1</a><a class="lv" href="b2/bai-99-learning-to-dance.html" aria-label="Bài 99, trình độ B2: Learning to Dance">B2</a></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <aside class="rail" aria-label="Giao diện">
+    <a class="theme-btn home-btn" href="../../" aria-label="Về trang profile" title="Về trang profile"><svg class="i-home" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a.5.5 0 0 1-.5.5h-5v-6h-6v6H4a.5.5 0 0 1-.5-.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-pressed="false" aria-label="Chuyển giao diện sáng/tối" title="Sáng / tối">
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </aside>
+  </div>
+
+  <aside class="note">
+    <h2>Ghi chú</h2>
+    <ul>
+      <li>Nội dung các bài có sự đóng góp của AI, vì vậy có thể còn sai sót (phiên âm IPA, trọng âm, nghĩa, ví dụ). Khi học, nên đối chiếu với từ điển.</li>
+      <li>Nếu có đóng góp (sửa lỗi, góp ý), xin gửi về <a href="mailto:thainguyenfan@gmail.com">thainguyenfan@gmail.com</a>.</li>
+    </ul>
+  </aside>
+</div>
+<script>
+(() => {
+  'use strict';
+  const root = document.documentElement, btn = document.getElementById('theme-btn');
+  let saved = 'light';
+  try { saved = JSON.parse(localStorage.getItem('ddn:theme')) || 'light'; } catch (e) {}
+  const setTheme = dark => { root.setAttribute('data-theme', dark ? 'dark' : 'light'); btn.setAttribute('aria-pressed', dark ? 'true' : 'false'); };
+  setTheme(saved === 'dark');
+  btn.addEventListener('click', () => {
+    const dark = root.getAttribute('data-theme') !== 'dark';
+    setTheme(dark);
+    try { localStorage.setItem('ddn:theme', JSON.stringify(dark ? 'dark' : 'light')); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

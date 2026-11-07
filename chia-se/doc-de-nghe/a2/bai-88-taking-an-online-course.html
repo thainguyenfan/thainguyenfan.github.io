@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 88 · Taking an Online Course</title>
+<meta name="description" content="Đọc để nghe — bài đọc ngắn có IPA, nghĩa, đồng nghĩa, mẹo nhớ và âm nối. Trình độ A2, giọng Mỹ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,400;7..72,600&family=Noto+Sans:wght@400;500;600&display=swap">
+<script>try{if(localStorage.getItem('ddn:theme')==='"dark"')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<style>
+/* ==========================================================
+   MÀU & FONT — đổi ở đây là đổi cả trang
+   ========================================================== */
+:root{
+  --ink:#251B3A; --ink-2:#574D72; --muted:#8A83A2; --line:#E8E2F4;
+  --p900:#261458; --p800:#3A1F86; --p700:#5232B4; --p600:#6B47CA; --p300:#BCA8F4; --p100:#EFE9FE; --p50:#F9F7FF;
+  --o700:#C2410C; --o600:#EA580C; --o500:#F97316; --o300:#FDBA74; --o100:#FFF0E3;
+  --desk:#ECE7F6;
+  --f-ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-read:"Literata",Georgia,"Times New Roman",serif;
+  --f-ipa:"Noto Sans","Charis SIL","Doulos SIL","Segoe UI","Lucida Grande","Arial Unicode MS",sans-serif;
+  --px:12mm;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--desk);color:var(--ink);font-family:var(--f-ui);line-height:1.42;-webkit-font-smoothing:antialiased}
+button,select{font:inherit;color:inherit}
+button{cursor:pointer}
+.ipa{font-family:var(--f-ipa);font-weight:400}
+
+/* ---------- Thanh điều khiển (chỉ hiện trên màn hình) ---------- */
+.toolbar{position:sticky;top:8px;z-index:20;width:210mm;max-width:calc(100% - 24px);margin:14px auto 0;display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:7px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px rgba(38,20,88,.10);font-size:13px;line-height:1}
+.tb{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 11px;border:1px solid var(--line);border-radius:9px;background:#fff;font-weight:600;color:var(--p800);white-space:nowrap}
+.tb:hover{background:var(--p50);border-color:var(--p300)}
+.tb svg{width:15px;height:15px;flex:none}
+.tb.primary{background:var(--p800);border-color:var(--p800);color:#fff;min-width:118px}
+.tb.primary:hover{background:var(--p700)}
+.tb[aria-pressed="true"]{background:var(--o100);border-color:var(--o500);color:var(--o700)}
+.field{display:inline-flex;align-items:center;gap:6px;color:var(--ink-2);font-weight:500;white-space:nowrap}
+.field select{height:32px;border:1px solid var(--line);border-radius:9px;background:#fff;padding:0 6px;max-width:180px;font-weight:600;color:var(--p800)}
+.sep{width:1px;height:22px;background:var(--line);margin:0 3px}
+.status{position:absolute;right:10px;top:calc(100% + 6px);padding:5px 10px;border-radius:999px;background:var(--o100);border:1px solid var(--o300);font-size:12px;font-weight:600;color:var(--o700);box-shadow:0 4px 14px rgba(38,20,88,.10)}
+.status:empty{display:none}
+.tip{width:210mm;max-width:calc(100% - 24px);margin:8px auto 0;font-size:12px;color:var(--ink-2);text-align:center}
+.no-tts .tts{display:none!important}
+.tts-missing{display:none;color:var(--o700);font-weight:600}
+.no-tts .tts-missing{display:inline}
+
+/* ---------- Trang A4 ---------- */
+.page{position:relative;width:210mm;min-height:297mm;margin:12px auto 48px;padding:0 var(--px) 7mm;background:#fff;border-radius:3mm;overflow:hidden;box-shadow:0 1px 2px rgba(38,20,88,.06),0 20px 50px rgba(38,20,88,.14);font-size:9pt;display:flex;flex-direction:column;gap:3mm}
+.page>*{flex:none}
+
+/* Đầu trang */
+.hero{position:relative;margin:0 calc(-1 * var(--px));padding:5mm var(--px) 4mm;background:var(--p800);color:#fff;display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;overflow:hidden;border-bottom:.9mm solid var(--o500)}
+.hero::after{content:attr(data-no);position:absolute;right:-1mm;top:-10mm;font:800 46mm/1 var(--f-ui);letter-spacing:-.05em;color:rgba(255,255,255,.07);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.kicker{font-size:.8em;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--o300)}
+.hero h1{font-size:2.45em;line-height:1.05;font-weight:800;letter-spacing:-.02em;margin:1.2mm 0 .6mm}
+.sub{font-size:1.08em;color:var(--p300);font-weight:500}
+.meta{list-style:none;display:grid;grid-template-columns:repeat(4,auto);gap:1.6mm}
+.meta li{padding:1.3mm 2.5mm 1.5mm;border:1px solid rgba(255,255,255,.22);border-radius:1.8mm;background:rgba(255,255,255,.06)}
+.meta span{display:block;font-size:.68em;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:.5mm}
+.meta b{font-size:1.02em;font-weight:700;white-space:nowrap}
+
+/* 5 bước luyện */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:1.8mm;counter-reset:st}
+.steps li{counter-increment:st;position:relative;padding:1.3mm 1.6mm 1.4mm 7.2mm;white-space:nowrap;background:var(--p50);border:1px solid var(--p100);border-radius:2mm}
+.steps li::before{content:counter(st);position:absolute;left:1.8mm;top:1.45mm;width:4.1mm;height:4.1mm;border-radius:50%;background:var(--o600);color:#fff;font-size:.8em;font-weight:800;line-height:4.1mm;text-align:center}
+.steps b{display:block;font-size:.94em;font-weight:700;color:var(--p800);line-height:1.25}
+.steps span{display:block;font-size:.78em;color:var(--ink-2);line-height:1.3;margin-top:.3mm}
+
+/* Tiêu đề mục */
+.sec{display:flex;align-items:center;gap:2.2mm;margin-bottom:1.8mm;font-size:.8em;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--p700);line-height:1.2}
+.sec::before{content:"";flex:none;width:2.3mm;height:2.3mm;border-radius:.6mm;background:var(--o500)}
+.sec::after{content:"";flex:1;height:.25mm;background:var(--line)}
+.sec small{font-size:.92em;font-weight:500;letter-spacing:.02em;text-transform:none;color:var(--muted)}
+
+/* Bài đọc */
+.passage{position:relative;font-family:var(--f-read);font-size:1.11em;line-height:2.05;color:var(--ink);background:var(--p50);border:1px solid var(--p100);border-radius:2.5mm;padding:1.4mm 4.6mm 2.2mm}
+.passage p+p{text-indent:1.6em}
+.passage rt{font-family:var(--f-ipa);font-size:.55em;font-weight:500;line-height:1;color:var(--p600);letter-spacing:.01em;text-indent:0}
+.kw{font-weight:600;color:var(--p800);text-decoration:underline;text-decoration-color:var(--o500);text-decoration-thickness:.11em;text-underline-offset:.24em;text-decoration-skip-ink:none}
+.s{border-radius:.3em;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-color .15s}
+@media (hover:hover){.s{cursor:pointer}.s:hover{background:var(--p100)}}
+.no-tts .s{cursor:auto}
+.s.on{background:var(--o100)!important;box-shadow:0 0 0 .14em var(--o100)}
+.s.turn{background:var(--p100)!important;box-shadow:0 0 0 .14em var(--p100)}
+.blind-note{display:none;position:absolute;inset:0;z-index:2;place-items:center;text-align:center;padding:4mm;font-family:var(--f-ui);font-size:.82em;line-height:1.5;font-weight:600;color:var(--p800)}
+.blind-note span{background:rgba(255,255,255,.94);border:1px solid var(--p300);border-radius:3mm;padding:2.5mm 4mm;box-shadow:0 6px 20px rgba(38,20,88,.12)}
+.blind .blind-note{display:grid}
+.blind .passage p{filter:blur(.3em);-webkit-user-select:none;user-select:none}
+
+/* Từ vựng */
+.vocab table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:.94em;line-height:1.32}
+.vocab col.c-n{width:5.5mm}.vocab col.c-w{width:34mm}.vocab col.c-m{width:52mm}
+.vocab th{padding:1.3mm 2mm;background:var(--p100);color:var(--p700);font-size:.76em;font-weight:800;letter-spacing:.1em;text-transform:uppercase;text-align:left;white-space:nowrap}
+.vocab th:first-child{border-radius:1.6mm 0 0 1.6mm;text-align:center}
+.vocab th:last-child{border-radius:0 1.6mm 1.6mm 0}
+.vocab td{padding:1.15mm 2mm;vertical-align:top;border-bottom:.25mm solid var(--line);transition:background-color .15s}
+.vocab tbody tr:last-child td{border-bottom:0}
+.vocab td.n{text-align:center;font-weight:800;color:var(--o600)}
+.w .word{font-size:1.16em;font-weight:700;color:var(--p900)}
+.w .pos{margin-left:1mm;font-size:.8em;color:var(--muted);font-weight:500}
+.w .l2{display:block;margin-top:.2mm}
+.w .ipa{color:var(--p600);font-size:1.04em}
+.ipa em{font-style:normal;font-weight:600;color:var(--o700)}
+.m .syn{display:block;color:var(--ink-2);margin-top:.3mm}
+.h div+div{margin-top:.5mm}
+.tag{display:inline-block;min-width:8.6mm;text-align:center;padding:.55mm 1.1mm .45mm;margin-right:1.4mm;border-radius:.8mm;font-size:.7em;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.2;vertical-align:.1em}
+.tag.hook{background:var(--p100);color:var(--p700)}
+.tag.trap{background:var(--o100);color:var(--o700)}
+.say{display:inline-grid;place-items:center;width:1.8em;height:1.8em;margin-left:1mm;border:0;border-radius:50%;background:var(--p100);color:var(--p700);vertical-align:-.42em;transition:background-color .15s,color .15s}
+.say svg{width:1.05em;height:1.05em}
+.say:hover{background:var(--p800);color:#fff}
+tr.on td,li.on{background:var(--o100)}
+
+/* Âm nối + trọng âm + nghe điền */
+.duo{display:grid;grid-template-columns:1.2fr 1fr;gap:5mm;align-items:start}
+.cs-list{list-style:none;line-height:1.3}
+.cs-list li{display:grid;grid-template-columns:26mm 38mm 1fr;column-gap:2.2mm;padding:1.1mm 1mm;border-bottom:.25mm solid var(--line);border-radius:1mm;transition:background-color .15s}
+.cs-list li:last-child{border-bottom:0}
+.cs-txt{font-weight:700;color:var(--p900)}
+.cs-sound b{font-weight:700;font-style:italic;color:var(--o700)}
+.cs-sound .ipa{display:block;font-size:.92em;color:var(--p600)}
+.cs-rule{font-size:.86em;color:var(--ink-2);line-height:1.32}
+.cs-rule .note{display:block;margin-top:.3mm}
+.side{display:grid;gap:3.2mm}
+.stress ul{list-style:none;display:grid;gap:1mm;margin-bottom:1.6mm}
+.stress li{color:var(--ink-2);font-size:1.02em;letter-spacing:.01em}
+.stress li b{color:var(--o700);font-weight:800}
+.stress li i{font-style:normal;color:var(--p300);margin:0 1mm}
+.rule{font-size:.88em;color:var(--ink-2);background:var(--p50);border-left:.8mm solid var(--p600);padding:1.1mm 2.2mm;border-radius:0 1.4mm 1.4mm 0}
+.rule b{color:var(--p800)}
+.dict ol{list-style:none;display:grid;gap:1.2mm;counter-reset:d}
+.dict li{counter-increment:d;position:relative;padding:0 1mm 0 4.6mm;line-height:1.75;border-radius:1mm}
+.dict li::before{content:counter(d) ".";position:absolute;left:.6mm;top:0;font-weight:800;color:var(--o600)}
+.dict li .say{margin:0 1mm 0 0}
+.gap{display:inline-block;min-width:30mm;height:1.3em;border-bottom:.3mm dashed var(--p300);text-align:center;vertical-align:-.25em;margin:0 .5mm}
+.show-key .gap{border-bottom-style:solid;border-bottom-color:var(--o500)}
+.show-key .gap::after{content:attr(data-a);color:var(--o700);font-weight:700}
+.reveal{margin-top:1.8mm;padding:1.1mm 3mm;border:1px solid var(--p300);border-radius:1.6mm;background:#fff;color:var(--p800);font-size:.86em;font-weight:700}
+.reveal:hover{background:var(--p50)}
+
+/* Chân trang */
+.foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:4mm;padding-top:2.2mm;border-top:.25mm solid var(--line);font-size:.84em;color:var(--ink-2)}
+.review{display:flex;align-items:center;flex-wrap:wrap;gap:1.4mm 2.6mm}
+.review>b{font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--p700)}
+.review label{display:inline-flex;align-items:center;gap:1mm;cursor:pointer;font-weight:600}
+.review input{-webkit-appearance:none;appearance:none;flex:none;width:3.4mm;height:3.4mm;margin:0;border:.35mm solid var(--p600);border-radius:.8mm;background:#fff;display:grid;place-items:center;cursor:pointer}
+.review input:checked{background:var(--p700);border-color:var(--p700)}
+.review input:checked::after{content:"";width:1.5mm;height:.8mm;margin-top:-.3mm;border:solid #fff;border-width:0 0 .4mm .4mm;transform:rotate(-45deg)}
+.key{display:none;transform:rotate(180deg);font-size:.8em;color:var(--muted);white-space:nowrap}
+.brand{font-weight:700;color:var(--p700);letter-spacing:.04em;white-space:nowrap}
+
+/* ---------- Màn hình lớn: phóng to chút cho dễ đọc ---------- */
+@media screen and (min-width:1280px){.wrap{zoom:1.18}}
+
+/* ---------- Điện thoại ---------- */
+@media screen and (max-width:860px){
+  :root{--px:16px}
+  .toolbar{top:6px;width:auto;max-width:none;margin:8px 8px 0;border-radius:12px}
+  .toolbar .lbl,.toolbar .sep{display:none}
+  .field select{max-width:150px}
+  .tb.primary{min-width:0}
+  .status{right:8px}
+  .tip{width:auto;max-width:none;margin:8px 16px 0;text-align:left}
+  .page{width:auto;min-height:0;margin:10px 0 0;border-radius:0;box-shadow:none;font-size:14.5px;gap:18px;padding-bottom:28px}
+  .hero{flex-direction:column;align-items:flex-start;gap:14px;padding:24px var(--px) 18px}
+  .hero::after{font-size:150px;top:-26px}
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}
+  .meta li{padding:8px 10px}
+  .steps{grid-template-columns:1fr;gap:6px}
+  .steps li{padding:8px 10px 8px 38px}
+  .steps li::before{left:10px;top:9px;width:20px;height:20px;line-height:20px}
+  .steps b,.steps span{display:inline}
+  .steps span::before{content:" — "}
+  .sec{margin-bottom:10px;flex-wrap:wrap;row-gap:3px}
+  .sec::after{display:none}
+  .sec small{flex:1 1 100%;padding-left:calc(2.3mm + 2.2mm)}
+  .cs-rule .note{display:inline;margin-left:6px}
+  .passage{padding:10px 14px 12px;line-height:2.2}
+  .vocab thead,.vocab colgroup{display:none}
+  .vocab table,.vocab tbody,.vocab tr,.vocab td{display:block;width:auto}
+  .vocab tr{position:relative;padding:12px 14px 12px 40px;border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+  .vocab td{border:0!important;padding:0}
+  .vocab td.n{position:absolute;left:14px;top:13px}
+  .vocab td.m,.vocab td.h{margin-top:8px}
+  .duo{grid-template-columns:1fr;gap:18px}
+  .cs-list li{grid-template-columns:1fr 1fr;row-gap:4px;padding:10px 4px}
+  .cs-rule{grid-column:1/-1}
+  .side{gap:18px}
+  .gap{min-width:120px}
+  .foot{flex-direction:column;align-items:flex-start;gap:10px;padding-top:14px}
+  .review input{width:18px;height:18px}
+  .review input:checked::after{width:8px;height:4px;border-width:0 0 2px 2px}
+}
+
+/* ---------- In / lưu PDF: đúng 1 trang A4 ---------- */
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff}
+  .toolbar,.tip,.say,.reveal,.screen-only,.blind-note{display:none!important}
+  .page{width:210mm;height:297mm;min-height:0;margin:0;border-radius:0;box-shadow:none;overflow:hidden}
+  .no-ipa .ipa{visibility:visible!important}
+  .blind .passage p{filter:none!important}
+  .s.on,.s.turn,tr.on td,li.on{background:none!important;box-shadow:none!important}
+  .show-key .gap::after{content:none}
+  .show-key .gap{border-bottom-style:dashed;border-bottom-color:var(--p300)}
+  .key{display:block}
+  .brand{display:none}
+}
+.no-ipa .ipa{visibility:hidden}
+
+/* ---------- Thanh bên phải: đổi giao diện sáng/tối (dính khi cuộn) ---------- */
+:root{--surface:#ffffff;--surface-glass:rgba(255,255,255,.92)}
+@media screen{
+  :root[data-theme="dark"]{
+    --desk:#0F0B1E; --surface:#17122B; --surface-glass:rgba(23,18,43,.92);
+    --ink:#ECE8F7; --ink-2:#B9B1D0; --muted:#8C84A8; --line:#2E2650;
+    --p50:#1E1834; --p100:#2A2250; --p600:#A78BFA; --p700:#C4B5FD; --p900:#F1ECFF;
+    --o100:rgba(249,115,22,.16); --o700:#FDBA74;
+    color-scheme:dark;
+  }
+  [data-theme="dark"] .toolbar{background:var(--surface-glass)}
+  [data-theme="dark"] .tb:not(.primary),[data-theme="dark"] .field select{background:var(--surface);color:#D9CCFF}
+  [data-theme="dark"] .tb.primary:hover{background:#5232B4}
+  [data-theme="dark"] .page,[data-theme="dark"] .card,[data-theme="dark"] .note{background:var(--surface)}
+  [data-theme="dark"] .kw,[data-theme="dark"] .steps b,[data-theme="dark"] .rule b,[data-theme="dark"] .reveal,[data-theme="dark"] .blind-note{color:#D9CCFF}
+  [data-theme="dark"] .reveal,[data-theme="dark"] .lv{background:var(--surface)}
+  [data-theme="dark"] .blind-note span{background:rgba(23,18,43,.94)}
+  [data-theme="dark"] .lv:hover{color:#1E1834}
+  [data-theme="dark"] .review input{background:var(--surface)}
+  [data-theme="dark"] .review input:checked{background:#7C5CE0;border-color:#7C5CE0}
+}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,210mm) minmax(0,1fr);column-gap:14px;align-items:start}
+.row.row-2{grid-template-columns:minmax(0,1fr) 0;column-gap:0}
+.row>.page,.row>.card{grid-column:2;grid-row:1}
+.row.row-2>.card{grid-column:1}
+.rail{grid-column:3;grid-row:1;justify-self:start;position:sticky;top:20px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.home-btn{text-decoration:none}
+.index-btn{text-decoration:none}
+.lv-btn{text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--p700)}
+.lv-btn:hover{transform:none;background:var(--p50);color:var(--p800)}
+.lv-btn[aria-current="page"]{background:var(--p800);border-color:var(--p800);color:#fff}
+.lv-btn[aria-current="page"]:hover{background:var(--p800);color:#fff}
+.index-btn svg{width:18px;height:18px}
+.row.row-2>.rail{grid-column:2;margin-left:14px}
+.theme-btn{width:40px;height:40px;display:inline-grid;place-items:center;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--p700);box-shadow:0 1px 2px rgba(38,20,88,.06),0 12px 30px -12px rgba(38,20,88,.18);cursor:pointer;transition:transform .2s ease,color .2s ease}
+.theme-btn:hover{transform:rotate(-15deg);color:var(--p600)}
+.theme-btn:focus-visible{outline:3px solid var(--o500);outline-offset:2px}
+.theme-btn svg{width:18px;height:18px}
+.theme-btn .i-sun{display:none}
+[data-theme="dark"] .theme-btn .i-sun{display:block}
+[data-theme="dark"] .theme-btn .i-moon{display:none}
+@media (max-width:860px){
+  .row,.row.row-2{display:block}
+  .rail{position:fixed;right:12px;bottom:14px;top:auto;z-index:30}
+}
+@media print{.rail{display:none!important}}
+</style>
+</head>
+<body data-lesson="bai-88">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-say" viewBox="0 0 24 24"><path d="M3.5 9.2v5.6h3.8l4.9 4V5.2L7.3 9.2z" fill="currentColor"/><path d="M15.6 8.6a4.8 4.8 0 0 1 0 6.8M18.4 5.8a8.8 8.8 0 0 1 0 12.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.8v14.4L19 12z" fill="currentColor"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9M7 17H4.5V9.5h15V17H17M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="wrap">
+
+  <div class="toolbar" role="toolbar" aria-label="Điều khiển nghe">
+    <button class="tb primary tts" id="play" type="button"><svg aria-hidden="true"><use href="#i-play"/></svg><span>Nghe cả bài</span></button>
+    <label class="field tts" title="Tốc độ đọc">
+      <select id="rate" aria-label="Tốc độ đọc">
+        <option value="0.6">0.6×</option>
+        <option value="0.75">0.75×</option>
+        <option value="0.9" selected>0.9×</option>
+        <option value="1">1×</option>
+      </select>
+    </label>
+    <label class="field tts" title="Giọng đọc">
+      <select id="voice" aria-label="Giọng đọc"><option value="">Mặc định</option></select>
+    </label>
+    <span class="sep tts"></span>
+    <button class="tb tts" id="t-blind" type="button" aria-pressed="false" title="Làm mờ bài đọc để nghe trước (bước 1)">Nghe mù</button>
+    <button class="tb tts" id="t-shadow" type="button" aria-pressed="false" title="Dừng sau mỗi câu để bạn nói lại (shadowing)">Nói theo</button>
+    <button class="tb" id="t-ipa" type="button" aria-pressed="false" title="Ẩn IPA để tự kiểm tra">Ẩn IPA</button>
+    <button class="tb" id="print" type="button" title="In hoặc lưu thành PDF (A4)"><svg aria-hidden="true"><use href="#i-print"/></svg><span class="lbl">In / PDF</span></button>
+    <span class="status" id="status" aria-live="polite"></span>
+  </div>
+  <p class="tip"><span class="tts">Bấm vào một câu bất kỳ để nghe riêng câu đó · <b>Esc</b> để dừng · Edge và Safari có giọng “Natural / Enhanced” nghe tự nhiên nhất.</span><span class="tts-missing">Trình duyệt này chưa hỗ trợ đọc to — hãy mở bằng Chrome, Edge hoặc Safari.</span></p>
+
+  <!-- ======================================================
+       NỘI DUNG BÀI HỌC
+       Làm bài mới: copy file này, chỉ sửa phần bên trong <article>.
+       - Từ khoá trong bài đọc:  <ruby><span class="kw">từ</span><rt class="ipa">IPA</rt></ruby>
+       - Mỗi câu bọc trong <span class="s">…</span> để bấm nghe được.
+       - Âm tiết nhấn trong IPA: bọc bằng <em>…</em> (sẽ hiện màu cam).
+       ====================================================== -->
+  <div class="row">
+  <article class="page">
+
+    <header class="hero" data-no="88">
+      <div>
+        <p class="kicker">Đọc để nghe · Bài 88</p>
+        <h1 lang="en">Taking an Online Course</h1>
+        <p class="sub">Học khóa trực tuyến</p>
+      </div>
+      <ul class="meta">
+        <li><span>Trình độ</span><b>A2</b></li>
+        <li><span>Độ dài</span><b>120 từ</b></li>
+        <li><span>Giọng</span><b>Mỹ (US)</b></li>
+        <li><span>Thời gian</span><b>~15 phút</b></li>
+      </ul>
+    </header>
+
+    <ol class="steps" aria-label="Cách luyện">
+      <li><b>Nghe mù</b><span>Chưa nhìn chữ</span></li>
+      <li><b>Đọc kỹ + IPA</b><span>Đọc to từng câu</span></li>
+      <li><b>Nghe + đọc</b><span>Mắt dõi theo chữ</span></li>
+      <li><b>Shadowing</b><span>Nói đuổi theo audio</span></li>
+      <li><b>Nghe lại</b><span>Bỏ chữ, so với lần 1</span></li>
+    </ol>
+
+    <section class="reading">
+      <h2 class="sec">Bài đọc <small>IPA giọng Mỹ in trên từ khoá<span class="screen-only tts"> · bấm vào câu để nghe</span></small></h2>
+      <div class="passage" id="passage" lang="en">
+        <div class="blind-note" lang="vi"><span>Chế độ nghe mù: bấm <b>Nghe cả bài</b> và đoán ý chính trước.<br>Bấm lại <b>Nghe mù</b> để hiện chữ.</span></div>
+        <p><span class="s">Last month, I enrolled in an online <ruby><span class="kw">course</span><rt class="ipa">kɔːrs</rt></ruby> about digital marketing.</span>
+          <span class="s">It was my first time studying online.</span>
+          <span class="s">The lessons were recorded, so I could study at night.</span></p>
+        <p><span class="s">Each <ruby><span class="kw">module</span><rt class="ipa">ˈmɑːdʒuːl</rt></ruby> had short videos, reading tasks, and a small <ruby><span class="kw">quiz</span><rt class="ipa">kwɪz</rt></ruby> at the end.</span>
+          <span class="s">The videos were clear and easy to follow.</span>
+          <span class="s">I liked the flexible schedule.</span></p>
+        <p><span class="s">Every week, we had an <ruby><span class="kw">assignment</span><rt class="ipa">əˈsaɪnmənt</rt></ruby> and a discussion in the online <ruby><span class="kw">forum</span><rt class="ipa">ˈfɔːrəm</rt></ruby>.</span>
+          <span class="s">My classmates came from many countries.</span>
+          <span class="s">Sometimes I felt lonely, but the group was very kind.</span></p>
+        <p><span class="s">The <ruby><span class="kw">instructor</span><rt class="ipa">ɪnˈstrʌktɚ</rt></ruby> gave helpful feedback, and I learned a lot.</span>
+          <span class="s">The final project was due before the <ruby><span class="kw">deadline</span><rt class="ipa">ˈdedlaɪn</rt></ruby>, but I finished on time.</span>
+          <span class="s">Soon I will receive my <ruby><span class="kw">certificate</span><rt class="ipa">sɚˈtɪfɪkət</rt></ruby>.</span>
+          <span class="s">I am proud of what I did.</span></p>
+      </div>
+    </section>
+
+    <section class="vocab">
+      <h2 class="sec">Từ vựng <small>8 từ · âm tiết màu cam là trọng âm</small></h2>
+      <table>
+        <colgroup><col class="c-n"><col class="c-w"><col class="c-m"><col class="c-h"></colgroup>
+        <thead><tr><th>#</th><th>Từ · phát âm</th><th>Nghĩa · ≈ đồng nghĩa</th><th>Mẹo nhớ · bẫy phát âm</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="n">1</td>
+            <td class="w"><span class="word" lang="en">course</span><button class="say tts" type="button" data-say="course" aria-label="Nghe: course"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/<em>kɔːrs</em>/</span><span class="pos">n</span></span></td>
+            <td class="m">khóa học<span class="syn" lang="en">≈ class, program, curriculum</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">cour-</b> (chạy) + <b lang="en">se</b> → khóa học theo đường</div><div><span class="tag trap">Bẫy</span>“ou” đọc <span class="ipa">/ɔːr/</span> (cuộn lưỡi); “se” đọc <span class="ipa">/s/</span></div></td>
+          </tr>
+          <tr>
+            <td class="n">2</td>
+            <td class="w"><span class="word" lang="en">module</span><button class="say tts" type="button" data-say="module" aria-label="Nghe: module"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/<em>ˈmɑː</em>.dʒuːl/</span><span class="pos">n</span></span></td>
+            <td class="m">mô-đun, phần học<span class="syn" lang="en">≈ unit, section, lesson</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">mod-</b> (mẫu) + -ule → một phần của khóa</div><div><span class="tag trap">Bẫy</span>nhấn <span class="ipa">/ˈmɑː/</span> (âm 1); “dule” đọc <span class="ipa">/dʒuːl/</span></div></td>
+          </tr>
+          <tr>
+            <td class="n">3</td>
+            <td class="w"><span class="word" lang="en">quiz</span><button class="say tts" type="button" data-say="quiz" aria-label="Nghe: quiz"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/<em>kwɪz</em>/</span><span class="pos">n, v</span></span></td>
+            <td class="m">bài kiểm tra ngắn<span class="syn" lang="en">≈ test, exam, questionnaire</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">quiz</b> — câu đố ngắn; “quýt” nhanh</div><div><span class="tag trap">Bẫy</span>“qu” đọc <span class="ipa">/kw/</span>; “z” đọc <span class="ipa">/z/</span></div></td>
+          </tr>
+          <tr>
+            <td class="n">4</td>
+            <td class="w"><span class="word" lang="en">assignment</span><button class="say tts" type="button" data-say="assignment" aria-label="Nghe: assignment"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/ə<em>ˈsaɪn</em>.mənt/</span><span class="pos">n</span></span></td>
+            <td class="m">bài tập<span class="syn" lang="en">≈ task, homework, job</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">assign</b> (giao) + -ment → bài được giao</div><div><span class="tag trap">Bẫy</span>nhấn <span class="ipa">/ˈsaɪn/</span> (âm 2); “-ment” đọc <span class="ipa">/mənt/</span></div></td>
+          </tr>
+          <tr>
+            <td class="n">5</td>
+            <td class="w"><span class="word" lang="en">forum</span><button class="say tts" type="button" data-say="forum" aria-label="Nghe: forum"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/<em>ˈfɔːr</em>.əm/</span><span class="pos">n</span></span></td>
+            <td class="m">diễn đàn<span class="syn" lang="en">≈ board, discussion group</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">forum</b> — diễn đàn; nơi cùng bàn luận</div><div><span class="tag trap">Bẫy</span>nhấn <span class="ipa">/ˈfɔːr/</span> (âm 1); “um” đọc <span class="ipa">/əm/</span></div></td>
+          </tr>
+          <tr>
+            <td class="n">6</td>
+            <td class="w"><span class="word" lang="en">instructor</span><button class="say tts" type="button" data-say="instructor" aria-label="Nghe: instructor"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/ɪn<em>ˈstrʌk</em>.tɚ/</span><span class="pos">n</span></span></td>
+            <td class="m">người hướng dẫn<span class="syn" lang="en">≈ teacher, coach, tutor</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">instruct</b> (hướng dẫn) + -or → người dạy</div><div><span class="tag trap">Bẫy</span>nhấn <span class="ipa">/ˈstrʌk/</span> (âm 2); “-or” cuối <span class="ipa">/ɚ/</span></div></td>
+          </tr>
+          <tr>
+            <td class="n">7</td>
+            <td class="w"><span class="word" lang="en">deadline</span><button class="say tts" type="button" data-say="deadline" aria-label="Nghe: deadline"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/<em>ˈded</em>.laɪn/</span><span class="pos">n</span></span></td>
+            <td class="m">hạn chót<span class="syn" lang="en">≈ due date, cutoff</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">dead</b> (chết) + <b lang="en">line</b> → vạch đích cuối</div><div><span class="tag trap">Bẫy</span>nhấn <span class="ipa">/ˈded/</span> (âm 1); “dead” đọc <span class="ipa">/ded/</span></div></td>
+          </tr>
+          <tr>
+            <td class="n">8</td>
+            <td class="w"><span class="word" lang="en">certificate</span><button class="say tts" type="button" data-say="certificate" aria-label="Nghe: certificate"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="l2"><span class="ipa">/sɚ<em>ˈtɪf</em>.ɪ.kət/</span><span class="pos">n</span></span></td>
+            <td class="m">chứng chỉ<span class="syn" lang="en">≈ diploma, license, award</span></td>
+            <td class="h"><div><span class="tag hook">Nhớ</span><b lang="en">certify</b> (chứng nhận) + -ate → giấy chứng nhận</div><div><span class="tag trap">Bẫy</span>nhấn <span class="ipa">/ˈtɪf/</span> (âm 2); “cer” đọc <span class="ipa">/sɚ/</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="duo">
+      <section class="cs">
+        <h2 class="sec">Nghe thật nó thế này <small>vì sao biết từ mà vẫn nghe không ra</small></h2>
+        <ul class="cs-list">
+          <li>
+            <span class="cs-txt" lang="en">enrolled in</span>
+            <span class="cs-sound"><b lang="en">“en-rold-in”</b><button class="say tts" type="button" data-say="Last month, I enrolled in an online course about digital marketing." aria-label="Nghe: enrolled in"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="ipa">/ɪnˈroʊld‿ɪn/</span></span>
+            <span class="cs-rule"><span class="tag hook">Nối âm</span><span class="note">d nối sang i</span></span>
+          </li>
+          <li>
+            <span class="cs-txt" lang="en">an online</span>
+            <span class="cs-sound"><b lang="en">“un-on-line”</b><button class="say tts" type="button" data-say="Last month, I enrolled in an online course about digital marketing." aria-label="Nghe: an online"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="ipa">/ən ˈɑːn.laɪn/</span></span>
+            <span class="cs-rule"><span class="tag hook">Âm yếu</span><span class="note">an → <span class="ipa">/ən/</span>, nhẹ</span></span>
+          </li>
+          <li>
+            <span class="cs-txt" lang="en">what I</span>
+            <span class="cs-sound"><b lang="en">“wuh-dye”</b><button class="say tts" type="button" data-say="I am proud of what I did." aria-label="Nghe: what I"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="ipa">/wʌɾ‿aɪ/</span></span>
+            <span class="cs-rule"><span class="tag hook">T kiểu Mỹ</span><span class="note">t → <span class="ipa">/ɾ/</span>, như “d”</span></span>
+          </li>
+          <li>
+            <span class="cs-txt" lang="en">first time</span>
+            <span class="cs-sound"><b lang="en">“fur-s-time”</b><button class="say tts" type="button" data-say="It was my first time studying online." aria-label="Nghe: first time"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="ipa">/fɝːs(t) taɪm/</span></span>
+            <span class="cs-rule"><span class="tag hook">Nuốt âm</span><span class="note">t gần như mất</span></span>
+          </li>
+          <li>
+            <span class="cs-txt" lang="en">digital</span>
+            <span class="cs-sound"><b lang="en">“dij-tul”</b><button class="say tts" type="button" data-say="Last month, I enrolled in an online course about digital marketing." aria-label="Nghe: digital"><svg aria-hidden="true"><use href="#i-say"/></svg></button><span class="ipa">/ˈdɪdʒ.ɪ.təl/</span></span>
+            <span class="cs-rule"><span class="tag hook">Rút gọn</span><span class="note">digital → 2 âm</span></span>
+          </li>
+        </ul>
+      </section>
+
+      <div class="side">
+        <section class="stress">
+          <h2 class="sec">Trọng âm “nhảy” <small>cùng họ từ, khác chỗ nhấn</small></h2>
+          <ul lang="en">
+            <li><b>OP</b>·er·ate<i>→</i>op·er·<b>A</b>·tion</li>
+            <li><b>PRE</b>·sent (n)<i>→</i>pre·<b>SENT</b> (v)</li>
+            <li><b>IN</b>·crease (n)<i>→</i>in·<b>CREASE</b> (v)</li>
+          </ul>
+          <p class="rule">Đuôi -tion: nhấn trước đuôi. Danh từ 2 âm nhấn đầu; động từ nhấn sau.</p>
+        </section>
+
+        <section class="dict">
+          <h2 class="sec">Nghe &amp; điền <small>mỗi chỗ trống 3 từ</small></h2>
+          <ol lang="en">
+            <li><button class="say tts" type="button" data-say="I signed up for a new course." aria-label="Nghe câu 1"><svg aria-hidden="true"><use href="#i-say"/></svg></button>I <span class="gap" data-a="signed up for"></span> a new course.</li>
+            <li><button class="say tts" type="button" data-say="When is the next quiz date?" aria-label="Nghe câu 2"><svg aria-hidden="true"><use href="#i-say"/></svg></button>When is the <span class="gap" data-a="next quiz date"></span>?</li>
+            <li><button class="say tts" type="button" data-say="Please submit your assignment today." aria-label="Nghe câu 3"><svg aria-hidden="true"><use href="#i-say"/></svg></button>Please <span class="gap" data-a="submit your assignment"></span> today.</li>
+          </ol>
+          <button class="reveal" id="reveal" type="button">Hiện đáp án</button>
+        </section>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <div class="review"><b>Ôn lại vào ngày</b>
+        <label><input type="checkbox" value="d1" aria-label="Ngày 1"> 1</label>
+        <label><input type="checkbox" value="d3" aria-label="Ngày 3"> 3</label>
+        <label><input type="checkbox" value="d7" aria-label="Ngày 7"> 7</label>
+        <label><input type="checkbox" value="d14" aria-label="Ngày 14"> 14</label>
+        <label><input type="checkbox" value="d30" aria-label="Ngày 30"> 30</label>
+      </div>
+      <div class="key" aria-hidden="true">Đáp án: signed up for · next quiz date · submit your assignment</div>
+      <div class="brand">Đọc để nghe · 88</div>
+    </footer>
+
+  </article>
+
+  <aside class="rail" aria-label="Giao diện">
+    <a class="theme-btn home-btn" href="../../../" aria-label="Về trang profile" title="Về trang profile"><svg class="i-home" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a.5.5 0 0 1-.5.5h-5v-6h-6v6H4a.5.5 0 0 1-.5-.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
+    <a class="theme-btn index-btn" href="../index.html" aria-label="Danh sách bài" title="Danh sách bài"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a>
+    <a class="theme-btn lv-btn" href="../a1/bai-88-taking-an-online-course.html" aria-label="Trình độ A1" title="Trình độ A1">A1</a>
+    <a class="theme-btn lv-btn" href="../a2/bai-88-taking-an-online-course.html" aria-label="Trình độ A2" title="Trình độ A2" aria-current="page">A2</a>
+    <a class="theme-btn lv-btn" href="../b1/bai-88-taking-an-online-course.html" aria-label="Trình độ B1" title="Trình độ B1">B1</a>
+    <a class="theme-btn lv-btn" href="../b2/bai-88-taking-an-online-course.html" aria-label="Trình độ B2" title="Trình độ B2">B2</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-pressed="false" aria-label="Chuyển giao diện sáng/tối" title="Sáng / tối">
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </aside>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const d = document, root = d.documentElement;
+  const $ = (s, el = d) => el.querySelector(s);
+  const $$ = (s, el = d) => Array.from(el.querySelectorAll(s));
+  const lesson = d.body.dataset.lesson || 'lesson';
+  const store = {
+    get(k, def) { try { const v = localStorage.getItem('ddn:' + k); return v === null ? def : JSON.parse(v); } catch (e) { return def; } },
+    set(k, v) { try { localStorage.setItem('ddn:' + k, JSON.stringify(v)); } catch (e) {} }
+  };
+
+  // Ôn lại: nhớ các ô đã tick (lưu trong trình duyệt của bạn)
+  $$('.review input').forEach(cb => {
+    const k = lesson + ':review:' + cb.value;
+    cb.checked = !!store.get(k, false);
+    cb.addEventListener('change', () => store.set(k, cb.checked));
+  });
+
+  // Nút bật/tắt chế độ
+  const bindToggle = (sel, cls, key) => {
+    const btn = $(sel); if (!btn) return;
+    const set = on => { root.classList.toggle(cls, on); btn.setAttribute('aria-pressed', on ? 'true' : 'false'); };
+    if (key) set(!!store.get(key, false));
+    btn.addEventListener('click', () => { const on = !root.classList.contains(cls); set(on); if (key) store.set(key, on); });
+  };
+  bindToggle('#t-blind', 'blind');
+  bindToggle('#t-ipa', 'no-ipa');
+  bindToggle('#t-shadow', 'shadow', 'shadow');
+
+  // Đổi giao diện sáng/tối (nhớ lựa chọn trong trình duyệt)
+  const themeBtn = $('#theme-btn');
+  const setTheme = dark => { root.setAttribute('data-theme', dark ? 'dark' : 'light'); themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false'); };
+  setTheme(store.get('theme', 'light') === 'dark');
+  themeBtn.addEventListener('click', () => { const dark = root.getAttribute('data-theme') !== 'dark'; setTheme(dark); store.set('theme', dark ? 'dark' : 'light'); });
+
+  const reveal = $('#reveal');
+  reveal.addEventListener('click', () => {
+    const on = root.classList.toggle('show-key');
+    reveal.textContent = on ? 'Ẩn đáp án' : 'Hiện đáp án';
+  });
+  $('#print').addEventListener('click', () => window.print());
+
+  // Đọc to bằng giọng có sẵn của trình duyệt (Web Speech API)
+  const synth = window.speechSynthesis;
+  if (!synth || typeof SpeechSynthesisUtterance === 'undefined') { root.classList.add('no-tts'); return; }
+
+  const rateSel = $('#rate'), voiceSel = $('#voice'), statusEl = $('#status'), playBtn = $('#play');
+  const savedRate = String(store.get('rate', '0.9'));
+  if (Array.from(rateSel.options).some(o => o.value === savedRate)) rateSel.value = savedRate;
+  rateSel.addEventListener('change', () => store.set('rate', rateSel.value));
+
+  // Bỏ các giọng "hiệu ứng" của macOS, ưu tiên giọng Mỹ tự nhiên
+  const NOVELTY = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|fred|junior|kathy|ralph|eddy|flo|grandma|grandpa|reed|rocko|sandy|shelley)\b/i;
+  const score = v => {
+    let s = /^en[-_]us/i.test(v.lang) ? 40 : /^en[-_]gb/i.test(v.lang) ? 30 : 10;
+    if (/natural|neural/i.test(v.name)) s += 40;
+    if (/premium|enhanced/i.test(v.name)) s += 35;
+    if (/google/i.test(v.name)) s += 20;
+    if (/\b(ava|aria|jenny|emma|andrew|brian|michelle|samantha|allison|zoe|evan|nathan|joelle|serena|daniel)\b/i.test(v.name)) s += 10;
+    return s;
+  };
+  const nice = v => v.name.replace(/^(microsoft|google|apple)\s+/i, '').replace(/\s+online/i, '').replace(/\s*[-–]\s*english.*$/i, '').trim() + ' · ' + v.lang.replace('_', '-');
+
+  let voices = [], voice = null;
+  const loadVoices = () => {
+    const list = synth.getVoices().filter(v => /^en([-_]|$)/i.test(v.lang) && !NOVELTY.test(v.name));
+    if (!list.length || list.length === voices.length) return;
+    voices = list.sort((a, b) => score(b) - score(a));
+    const saved = store.get('voice', '');
+    voiceSel.innerHTML = '';
+    voices.forEach(v => voiceSel.add(new Option(nice(v), v.name)));
+    voice = voices.find(v => v.name === saved) || voices[0];
+    voiceSel.value = voice.name;
+  };
+  loadVoices();
+  if ('onvoiceschanged' in synth) synth.onvoiceschanged = loadVoices;
+  setTimeout(loadVoices, 400);
+  voiceSel.addEventListener('change', () => { voice = voices.find(v => v.name === voiceSel.value) || null; store.set('voice', voiceSel.value); });
+
+  // Lấy chữ của một câu, bỏ phần IPA và nút bấm
+  const plain = el => {
+    const c = el.cloneNode(true);
+    c.querySelectorAll('rt, rp, button').forEach(n => n.remove());
+    return c.textContent.replace(/\s*[—–]\s*/g, ', ').replace(/\s+/g, ' ').trim();
+  };
+
+  let run = 0, timer = 0, lit = null, mode = null;
+  const light = (el, cls = 'on') => { if (lit) lit.classList.remove('on', 'turn'); lit = el || null; if (lit) lit.classList.add(cls); };
+  const status = (msg, playing) => {
+    statusEl.textContent = msg || '';
+    root.classList.toggle('playing', !!playing);
+    const all = playing && mode === 'all';
+    playBtn.querySelector('span').textContent = all ? 'Dừng' : 'Nghe cả bài';
+    playBtn.querySelector('use').setAttribute('href', all ? '#i-stop' : '#i-play');
+  };
+
+  const speak = (text, done) => {
+    const id = run;
+    const u = new SpeechSynthesisUtterance(text);
+    if (voice) { u.voice = voice; u.lang = voice.lang; } else u.lang = 'en-US';
+    u.rate = parseFloat(rateSel.value) || 0.9;
+    let t0 = 0;
+    u.onstart = () => { t0 = performance.now(); };
+    u.onend = () => { if (id === run) done(t0 ? performance.now() - t0 : 1500); };
+    u.onerror = e => { if (id === run && e.error !== 'interrupted' && e.error !== 'canceled') done(0); };
+    speak.keep = u; // giữ tham chiếu để Chrome không làm mất sự kiện onend
+    synth.speak(u);
+  };
+
+  const stop = () => {
+    run++; mode = null; clearTimeout(timer);
+    const busy = synth.speaking || synth.pending;
+    synth.cancel(); light(null); status('', false);
+    return busy;
+  };
+  const after = (busy, fn) => { if (busy) timer = setTimeout(fn, 90); else fn(); };
+
+  const sayOne = (text, el) => {
+    const busy = stop(), id = run;
+    after(busy, () => {
+      if (id !== run) return;
+      light(el); status('', true);
+      speak(text, () => { light(null); status('', false); });
+    });
+  };
+
+  const playAll = (from = 0) => {
+    const busy = stop(), id = run;
+    mode = 'all';
+    const list = $$('#passage .s');
+    let i = from;
+    const next = () => {
+      if (id !== run) return;
+      if (i >= list.length) { mode = null; light(null); status('Xong ✓', false); return; }
+      const el = list[i++];
+      light(el); status('Câu ' + i + '/' + list.length, true);
+      speak(plain(el), ms => {
+        if (root.classList.contains('shadow')) {
+          light(el, 'turn'); status('Đến lượt bạn — nói lại câu ' + i, true);
+          timer = setTimeout(next, Math.min(15000, ms * 1.15 + 800));
+        } else timer = setTimeout(next, 300);
+      });
+    };
+    status('', true);
+    after(busy, next);
+  };
+
+  playBtn.addEventListener('click', () => { if (mode === 'all') stop(); else playAll(0); });
+  $$('#passage .s').forEach((el, i) => el.addEventListener('click', () => { if (mode === 'all') playAll(i); else sayOne(plain(el), el); }));
+  $$('.say').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); sayOne(b.dataset.say, b.closest('tr, li')); }));
+  d.addEventListener('keydown', e => { if (e.key === 'Escape') stop(); });
+  window.addEventListener('pagehide', () => synth.cancel());
+})();
+</script>
+</body>
+</html>
